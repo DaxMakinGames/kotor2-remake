@@ -3,8 +3,6 @@
 A fan remake of *Star Wars: Knights of the Old Republic II – The Sith Lords* in a modern engine.<br>
 It runs the original game's own levels, conversations and scripts, built on your computer from **your own copy** of the game.
 
-<img width="100%" alt="KOTOR 2 Remake" src="https://github.com/user-attachments/assets/a8e9cbd1-f9b6-405e-a0d7-b4107dbfbdad" />
-
 </div>
 
 > [!WARNING]
