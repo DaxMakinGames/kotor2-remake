@@ -1,0 +1,20 @@
+; The installer's texture-mod project: one HD texture overhaul (mods/<id>/), imported and VRAM-compressed, then
+; packed into <id>.zip for the game's mods folder (install.py build_texture_mods).
+config_version=5
+
+[application]
+
+config/name="kotor2 texture mod"
+config/features=PackedStringArray("4.7", "Forward Plus")
+
+[importer_defaults]
+
+texture={
+"mipmaps/generate": true,
+"compress/mode": 2,
+"detect_3d/compress_to": 0
+}
+
+[rendering]
+
+textures/vram_compression/import_etc2_astc=true

@@ -1,0 +1,13 @@
+{
+  "id": "hardcore",
+  "name": "Hardcore",
+  "version": "1.0.0",
+  "author": "KOTOR 2 remake",
+  "description": "Enemies hit harder and more often, wounds don't heal on their own, medpacs and shields do less, and Force powers cost more. Choose Ironman when starting a new game for one life: fall and the run is over.",
+  "icon": "icon.png",
+  "api": 1,
+  "entry": "main.gd",
+  "load_after": [],
+  "conflicts": [],
+  "replaces": []
+}
