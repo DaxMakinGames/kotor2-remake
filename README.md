@@ -66,7 +66,7 @@ This is a test build: thank you for trying it. Please report problems in [Issues
 ## Mods
 
 The remake has its own mod support: drop a mod's `.zip` into the `mods` folder beside the game and switch it on in
-**Mods** on the title screen. Mods can change how the game plays (hard modes, Ironman, new items), not just how it
+**Mods** on the title screen. Mods can change how the game plays (hard modes, new items, etc), not just how it
 looks. Making mods: [MODDING.md](MODDING.md), with an example mod and the packing tools in [modding/](modding).
 
 ---
