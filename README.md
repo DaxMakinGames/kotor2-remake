@@ -1,14 +1,22 @@
 # KOTOR 2 Remake (fan project)
 
-A fan remake of *Star Wars: Knights of the Old Republic II – The Sith Lords* in a modern engine. It runs the original
-game's own levels, conversations and scripts, built on your computer from **your own copy** of the game.
+A fan remake of *Star Wars: Knights of the Old Republic II – The Sith Lords* in a modern engine.<br>
+It runs the original game's own levels, conversations and scripts, built on your computer from **your own copy** of the game.
 
+<img width="100%" alt="KOTOR 2 Remake" src="https://github.com/user-attachments/assets/a8e9cbd1-f9b6-405e-a0d7-b4107dbfbdad" />
+
+</div>
+
+> [!WARNING]
 > **Early demo: the first level only.** Peragus and the Harbinger, start to finish. Things are expected to be broken.
 > It's an engine recreation: the original game as it was, with only light modernization. See the
 > [roadmap](RELEASE_CHECKLIST.md) for what's done and what's next.
 
+> [!NOTE]
 > **Unofficial and free.** Not affiliated with or endorsed by Lucasfilm, Disney, Obsidian, Aspyr or EA. This download
 > contains **no files from the original game**: you need your own copy of KOTOR 2 (Steam or GOG).
+
+---
 
 ## Download
 
@@ -31,9 +39,27 @@ later.
 
 Why these mods, and what each one does: [COMMUNITY_MODS.md](COMMUNITY_MODS.md).
 
+<table>
+  <tr>
+    <td width="50%"><img width="100%" alt="image" src="https://github.com/user-attachments/assets/526a6708-7255-41e1-97d8-43715a2c14bc" /></td>
+    <td width="50%"><img width="100%" alt="image" src="https://github.com/user-attachments/assets/c5de1805-398f-4925-8256-a45906224cf8" /></td>
+  </tr>
+  <tr>
+    <td width="50%"><img width="100%" alt="image" src="https://github.com/user-attachments/assets/25f2b1c3-5a4b-42fc-a619-1a8767d6cc9e" /></td>
+    <td width="50%"><img width="100%" alt="image" src="https://github.com/user-attachments/assets/c954e3b6-792a-4b85-966c-afb47ecb56c4" /></td>
+  </tr>
+  <tr>
+    <td width="50%"><img width="100%" alt="image" src="https://github.com/user-attachments/assets/52cd041b-c47b-4db2-a937-5b24f0264785" /></td>
+    <td width="50%"><img width="100%" alt="image" src="https://github.com/user-attachments/assets/8020374c-4b16-46b8-9152-183ad9f682d1" /></td>
+  </tr>
+</table>
+
+---
+
 ## Testing and bug reports
 
 This is a test build: thank you for trying it. Please report problems in [Issues](../../issues) with:
+
 - what happened, and what you expected
 - where in the game (which room)
 - your Mac model and macOS version
@@ -45,14 +71,13 @@ The remake has its own mod support: drop a mod's `.zip` into the `mods` folder b
 **Mods** on the title screen. Mods can change how the game plays (hard modes, Ironman, new items), not just how it
 looks. Making mods: [MODDING.md](MODDING.md), with an example mod and the packing tools in [modding/](modding).
 
+---
+
 ## Credits
 
-- **The original game:** BioWare and Obsidian Entertainment. Star Wars is Lucasfilm's.
-- **TSLRCM** by Zbyl2, DarthStoney, Hassat Hunter & VarsityPuppet (Switch port on
-  [GameBanana](https://gamebanana.com/mods/617353)).
-- **Optional mods, ported as examples:** Vanilla Planets HD and Vanilla Characters HD by Saul0097, Relighting TSL by J.
-  Used without their authors' direct permission; nothing of theirs is included. Authors who'd like theirs left out
-  can open an issue. Details: [COMMUNITY_MODS.md](COMMUNITY_MODS.md).
-- **Tools:** [Godot Engine](https://godotengine.org) (MIT), [Dialogue Manager](https://github.com/nathanhoad/godot_dialogue_manager)
-  (MIT), [KotorBlender](https://github.com/OpenKotOR/kotorblender) (GPL-3.0), [PyKotor](https://github.com/NickHugi/PyKotor)
-  (LGPL), [Blender](https://www.blender.org) (GPL).
+| | |
+|---|---|
+| **The original game** | BioWare and Obsidian Entertainment. Star Wars is Lucasfilm's. |
+| **TSLRCM** | by Zbyl2, DarthStoney, Hassat Hunter & VarsityPuppet (Switch port on [GameBanana](https://gamebanana.com/mods/617353)). |
+| **Optional mods, ported as examples** | Vanilla Planets HD and Vanilla Characters HD by Saul0097, Relighting TSL by J. Used without their authors' direct permission; nothing of theirs is included. Authors who'd like theirs left out can open an issue. Details: [COMMUNITY_MODS.md](COMMUNITY_MODS.md). |
+| **Tools** | [Godot Engine](https://godotengine.org) (MIT), [Dialogue Manager](https://github.com/nathanhoad/godot_dialogue_manager) (MIT), [KotorBlender](https://github.com/OpenKotOR/kotorblender) (GPL-3.0), [PyKotor](https://github.com/NickHugi/PyKotor) (LGPL), [Blender](https://www.blender.org) (GPL). |
