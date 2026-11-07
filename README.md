@@ -73,7 +73,6 @@ looks. Making mods: [MODDING.md](MODDING.md), with an example mod and the packin
 
 ## Credits
 
-| | |
 |---|---|
 | **The original game** | BioWare and Obsidian Entertainment. Star Wars is Lucasfilm's. |
 | **TSLRCM** | by Zbyl2, DarthStoney, Hassat Hunter & VarsityPuppet (Switch port on [GameBanana](https://gamebanana.com/mods/617353)). |
