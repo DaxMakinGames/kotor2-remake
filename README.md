@@ -77,5 +77,4 @@ looks. Making mods: [MODDING.md](MODDING.md), with an example mod and the packin
 |---|---|
 | **The original game** | BioWare and Obsidian Entertainment. Star Wars is Lucasfilm's. |
 | **TSLRCM** | by Zbyl2, DarthStoney, Hassat Hunter & VarsityPuppet (Switch port on [GameBanana](https://gamebanana.com/mods/617353)). |
-| **Optional mods, ported as examples** | Vanilla Planets HD and Vanilla Characters HD by Saul0097, Relighting TSL by J. Used without their authors' direct permission; nothing of theirs is included. Authors who'd like theirs left out can open an issue. Details: [COMMUNITY_MODS.md](COMMUNITY_MODS.md). |
 | **Tools** | [Godot Engine](https://godotengine.org) (MIT), [Dialogue Manager](https://github.com/nathanhoad/godot_dialogue_manager) (MIT), [KotorBlender](https://github.com/OpenKotOR/kotorblender) (GPL-3.0), [PyKotor](https://github.com/NickHugi/PyKotor) (LGPL), [Blender](https://www.blender.org) (GPL). |
