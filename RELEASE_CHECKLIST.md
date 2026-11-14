@@ -89,6 +89,8 @@ The Mac installer builds the game from your own copy of KOTOR 2, so nothing from
 - [x] Turns the HD texture packs into mods you can switch off
 - [x] Works with either TSLRCM build (PC or Switch)
 - [x] Checks your free disk space first
+- [x] Quick updates: replaces only the game when the game data hasn't changed
+- [x] Unpacks mod downloads (.7z, .zip, .rar) by itself, so there's nothing to unzip
 - [x] Tested from scratch on one level
 - [ ] Tested from scratch on the whole demo, start to finish in the window
 - [ ] Tested on a second Mac

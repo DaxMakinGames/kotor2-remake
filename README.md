@@ -28,17 +28,20 @@ later.
 ## Install
 
 1. **Have KOTOR 2** installed from Steam or GOG.
-2. **Download TSLRCM** (free, required): [TSLRCM 1.8.6 on GameBanana](https://gamebanana.com/mods/617353). Unzip it
-   in your Downloads folder.
+2. **Download TSLRCM** (free, required): [TSLRCM 1.8.6 on GameBanana](https://gamebanana.com/mods/617353). Leave it in
+   your Downloads folder: Setup unpacks it by itself (the `.7z` too), so there's nothing to unzip.
 3. **Optional, for sharper textures:** [Vanilla Planets HD](https://deadlystream.com/files/file/2976-vanilla-planets-hd/)
-   and [Vanilla Characters HD](https://deadlystream.com/files/file/2987-vanilla-characters-hd-optimized/). Unzip them
-   in Downloads too. They become mods you can switch off at any time.
+   and [Vanilla Characters HD](https://deadlystream.com/files/file/2987-vanilla-characters-hd-optimized/), into
+   Downloads too. They become mods you can switch off at any time.
 4. **Open the dmg and run KOTOR 2 Remake Setup.** It isn't signed by Apple, so the first time macOS says it can't
    check it: click **Done**, open **System Settings → Privacy & Security**, scroll down and click **Open Anyway** next
    to KOTOR 2 Remake Setup, then confirm. Setup checks everything and shows one **Install** button. If something's missing, it says what
    and updates by itself once you've downloaded it.
 5. **Wait.** The first build takes an hour or more: Setup converts the game's levels from your copy. Then press
    **Play**.
+
+**Updating:** download the new Setup and run it. If your game data is still current, it says **Update** and only
+replaces the game, in about a minute; your game data, mods, saves and settings stay as they are.
 
 Why these mods, and what each one does: [COMMUNITY_MODS.md](COMMUNITY_MODS.md).
 
@@ -61,7 +64,8 @@ Why these mods, and what each one does: [COMMUNITY_MODS.md](COMMUNITY_MODS.md).
 
 ## Testing and bug reports
 
-This is a test build: thank you for trying it. Before reporting, check the [known issues](KNOWN_ISSUES.md).
+This is a test build: thank you for trying it. Before reporting, check the [known issues](KNOWN_ISSUES.md). Want to
+help more? The [testing guide](TESTING.md) lists the parts that most need someone to play them.
 
 The easiest way to report a problem is **Report a Bug**, on the title screen or the pause menu (Esc). Say what
 happened and press **Open report on GitHub**: the build, the level and your computer are filled in for you, and
