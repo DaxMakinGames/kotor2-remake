@@ -1,7 +1,7 @@
 # Known issues
 
 Things I already know about in the demo, so you don't need to report them (but if you find out more, add it to the
-issue linked here, or open one). Last updated for **0.5.0-demo**.
+issue linked here, or open one). Last updated for **0.6.0-demo**.
 
 ## Installing
 
@@ -15,7 +15,8 @@ issue linked here, or open one). Last updated for **0.5.0-demo**.
 
 - **A rare crash when changing level.** Seen once, going from the mining tunnels to the fuel depot. If it happens to
   you, the title screen offers to report it with its log, which would really help.
-- **Gamepads don't work in every menu yet.** Use the mouse and keyboard there.
+- **Controller support is new.** If a screen can't be used with a controller, or a button does the wrong thing,
+  please report it. Controller buttons can't be rebound yet (keys can, in Options).
 - **Voices on the later Peragus levels** haven't all been checked. Missing or wrong lines are worth reporting.
 - **Combat balance** (enemy numbers, XP) hasn't been tuned by hand yet.
 - **Some lighting and floors** may look too dark or patchy in places.

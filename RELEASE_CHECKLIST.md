@@ -40,7 +40,7 @@ Here's what's done, what I'm working on, and what's left before a 1.0. Checked b
 **Before I call the demo finished**
 - [ ] An end screen that says what's next and where to report bugs
 - [x] A known-issues list ([KNOWN_ISSUES.md](KNOWN_ISSUES.md))
-- [ ] Gamepad support in every menu
+- [x] Gamepad support in every menu (first version)
 
 ## Planets
 
@@ -128,7 +128,13 @@ I'm keeping this light on purpose. The original's look and rules come first.
 - [x] HD textures as optional mods (Vanilla Planets HD, Vanilla Characters HD)
 - [x] Modern menus that still feel like the original
 - [x] Rebindable controls and accessibility options
-- [ ] Full gamepad support
+- [x] Controller support: every action on a pad, menus with the d-pad and A/B, the right stick for the camera and
+      the Force wheel, button names in prompts, vibration (new: tell me about any screen that doesn't work with it)
+- [x] Quicksave and quickload (F5, F9), and the last three autosaves kept
+- [x] A combat log on the HUD, with the dice rolls if you want them
+- [x] A conversation log (K), and replies you've already chosen greyed out
+- [x] Camera options: field of view, over-the-shoulder, swinging behind you as you walk
+- [x] Lightsaber trails, and Enhanced Force effects (light, shockwaves, lightning arcs), with the originals as an option
 - [ ] Better lighting where the original's lighting is broken
 - [ ] Menus checked on widescreen and high-resolution displays
 

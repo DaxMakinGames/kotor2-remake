@@ -58,7 +58,13 @@ You don't need to do them all, or in order. Even "I checked X and it was fine" i
 - [ ] Save, quit the game completely, open it again and load: dead enemies stay dead, open doors stay open, your
       items and party are the same.
 
-### 10. Mods (optional)
+### 10. With a controller
+**Where:** anywhere, from the title screen on.
+- [ ] Every menu can be used with the d-pad, A and B.
+- [ ] Moving, the camera, attacking, Force powers (hold Y, aim with the right stick) and the quick items work.
+- [ ] Prompts name the controller's buttons.
+
+### 11. Mods (optional)
 **Where:** title screen → Mods.
 - [ ] Switching the HD texture mods off and on (then Restart to apply) swaps between standard and sharp textures.
 - [ ] Saving a collection and switching to it brings back the same mods.
