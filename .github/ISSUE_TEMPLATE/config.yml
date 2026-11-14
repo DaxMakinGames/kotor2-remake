@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Known issues
+    url: https://github.com/DaxMakinGames/kotor2-remake/blob/main/KNOWN_ISSUES.md
+    about: Problems already known in the demo. Check here first.

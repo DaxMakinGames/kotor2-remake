@@ -25,7 +25,7 @@ level files, lip-sync files and voices are byte-for-byte the same as the PC buil
 - **The Switch build** (`romfs` inside): what the link above gives you. The installer lays it out like the PC
   build and makes two changes so the game plays the same:
   - It leaves out two of its scripts, `a_con_atton_end` and `a_playpermov`. On Switch these replace the Harbinger's
-    arrival scene with a movie; without them the game's own in-game scene plays, as on PC.
+	arrival scene with a movie; without them the game's own in-game scene plays, as on PC.
   - Game text lines that name controller buttons (like `<abutton>`) are taken from the PC game instead.
 - **The PC/mobile build** (`dlc/mods_english` inside), if you already have it.
 

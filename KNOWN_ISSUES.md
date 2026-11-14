@@ -1,0 +1,27 @@
+# Known issues
+
+Things I already know about in the demo, so you don't need to report them (but if you find out more, add it to the
+issue linked here, or open one). Last updated for **0.4.0-demo**.
+
+## Installing
+
+- **macOS asks before opening Setup.** It isn't signed by Apple. Click **Done**, then **System Settings → Privacy &
+  Security → Open Anyway**.
+- **The first build takes an hour or more.** That's normal: Setup converts every level from your copy of the game.
+  If it stops, **Try again** carries on where it left off.
+- **Mac only** for now. Windows is planned.
+
+## In the game
+
+- **A rare crash when changing level.** Seen once, going from the mining tunnels to the fuel depot. If it happens to
+  you, the title screen offers to report it with its log, which would really help.
+- **Gamepads don't work in every menu yet.** Use the mouse and keyboard there.
+- **Voices on the later Peragus levels** haven't all been checked. Missing or wrong lines are worth reporting.
+- **Combat balance** (enemy numbers, XP) hasn't been tuned by hand yet.
+- **Some lighting and floors** may look too dark or patchy in places.
+- **The end of the demo** doesn't yet say what's next.
+
+## Mods
+
+- Mods can't add levels, or replace models, sounds or conversations yet. See [MODDING.md](MODDING.md).
+- Turning mods on or off needs a restart (**Restart to apply** on the Mods screen).

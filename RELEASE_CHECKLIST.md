@@ -35,10 +35,12 @@ Here's what's done, what I'm working on, and what's left before a 1.0. Checked b
 - [ ] Combat balance (enemy numbers and XP)
 - [ ] Voices on the later Peragus levels
 - [ ] Crafting prices
+- [ ] A full playthrough by someone who isn't me (this is where you come in)
 
 **Before I call the demo finished**
+- [ ] An end screen that says what's next and where to report bugs
+- [x] A known-issues list ([KNOWN_ISSUES.md](KNOWN_ISSUES.md))
 - [ ] Gamepad support in every menu
-- [ ] Bug free for first level (meaning should translate for other levels)
 
 ## Planets
 
@@ -88,6 +90,8 @@ The Mac installer builds the game from your own copy of KOTOR 2, so nothing from
 - [x] Works with either TSLRCM build (PC or Switch)
 - [x] Checks your free disk space first
 - [x] Tested from scratch on one level
+- [ ] Tested from scratch on the whole demo, start to finish in the window
+- [ ] Tested on a second Mac
 - [ ] Windows
 - [ ] Linux and Steam Deck
 - [ ] Checks the game works before you launch it the first time
@@ -109,14 +113,14 @@ The Mac installer builds the game from your own copy of KOTOR 2, so nothing from
 - [x] A modding guide ([MODDING.md](MODDING.md))
 
 **Later**
-- [ ] Expand the modding wiki and make a seperate site for it
+- [ ] Put the modding wiki online
 - [ ] Hooks for stores, influence, alignment and minigames, once those systems exist
 - [ ] Replacing models, sounds and conversations
-- [ ] Lock the modding API for 1.0, so new hooks can be added but nothing gets renamed or removed (this should help modders not have to rework everything they port)
+- [ ] Lock the modding API for 1.0, so new hooks can be added but nothing gets renamed or removed
 
 ## Modernization
 
-I'm keeping this light on purpose.
+I'm keeping this light on purpose. The original's look and rules come first.
 
 - [x] Modern graphics settings, resolution and frame rate options
 - [x] HD textures as optional mods (Vanilla Planets HD, Vanilla Characters HD)
@@ -129,13 +133,16 @@ I'm keeping this light on purpose.
 ## Platforms
 
 - [x] Mac (Apple Silicon)
-- [ ] Windows
+- [ ] A signed Mac app, so you don't have to right-click and choose Open (that needs Apple's $99/year developer program)
+- [ ] Windows (it'll warn you the app isn't signed)
 - [ ] Linux and Steam Deck
+- [ ] Minimum and recommended specs, actually measured
+- [ ] Load times and frame rates measured in the heaviest scenes
 
 ## Stability
 
 - [x] Saves remember which mods you had on, and warn you if that's changed
-- [ ] A crash log with the build number, and a message telling you where to find it
+- [x] A crash notice: if the game closed unexpectedly, the title screen says so and offers to report it with its log
 - [ ] A rare crash on a level change (I've seen it once, going from the mining tunnels to the fuel depot)
 - [ ] Demo saves loading in later builds, or at least a clear message if they can't
 - [ ] All the automated tests passing on every release build
@@ -145,9 +152,12 @@ I'm keeping this light on purpose.
 - [x] Test builds on GitHub with the Mac installer
 - [x] A readme with what it is, what you need and how to install it
 - [x] Screenshots
-- [ ] A known-issues list
+- [x] A known-issues list
+- [x] A bug report form on GitHub, and **Report a Bug** in the game that fills it in for you
 - [ ] A changelog
-- [ ] The version number on the title screen
+- [x] The version number on the title screen
+- [ ] A credits screen in the game
+- [ ] A short video
 
 ## Legal
 
@@ -158,4 +168,5 @@ This is a fan project built on Lucasfilm's game, and these are the rules I stick
 - [x] **Community mods come from your own downloads**, with links and credits ([COMMUNITY_MODS.md](COMMUNITY_MODS.md)).
 - [x] **Free to use, always.** No price, no paid builds, no donations tied to the game.
 - [x] **Clearly unofficial.** Not affiliated with or endorsed by Lucasfilm, Disney, Obsidian, Aspyr or EA.
+- [ ] Pick a proper open licence for my own code, so "free to use" is official
 - [ ] An unofficial name and logo (no official logos or box art)
