@@ -16,7 +16,10 @@ issue linked here, or open one). Last updated for **0.6.0-demo**.
 - **A rare crash when changing level.** Seen once, going from the mining tunnels to the fuel depot. If it happens to
   you, the title screen offers to report it with its log, which would really help.
 - **Controller support is new.** If a screen can't be used with a controller, or a button does the wrong thing,
-  please report it. Controller buttons can't be rebound yet (keys can, in Options).
+  please report it. Controller buttons can't be rebound yet (keys can, in Options),
+  and "Party: hold or follow" has no controller button yet (it's H on the keyboard).
+- **The map's markers** show exits, loot and your own notes, not where a quest wants you to go: the original game's
+  journal only says what to do, not where.
 - **Voices on the later Peragus levels** haven't all been checked. Missing or wrong lines are worth reporting.
 - **Combat balance** (enemy numbers, XP) hasn't been tuned by hand yet.
 - **Some lighting and floors** may look too dark or patchy in places.

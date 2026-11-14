@@ -64,7 +64,13 @@ You don't need to do them all, or in order. Even "I checked X and it was fine" i
 - [ ] Moving, the camera, attacking, Force powers (hold Y, aim with the right stick) and the quick items work.
 - [ ] Prompts name the controller's buttons.
 
-### 11. Mods (optional)
+### 11. The new options
+**Where:** Options → Gameplay and Accessibility, the Party page, the map.
+- [ ] Companion tactics (Party page) change how a companion fights: staying back, medpacs, Force powers.
+- [ ] Auto-pause and Space/B pause fights at the right moments, and don't get in the way.
+- [ ] Larger text and the readable font make menus easier to read, without cutting anything off.
+
+### 12. Mods (optional)
 **Where:** title screen → Mods.
 - [ ] Switching the HD texture mods off and on (then Restart to apply) swaps between standard and sharp textures.
 - [ ] Saving a collection and switching to it brings back the same mods.
