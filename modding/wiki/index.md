@@ -42,8 +42,8 @@ saved state. All of that works without touching the game's files.
 
 - **[Hardcore](examples/hardcore.md)**: tougher fights and an Ironman mode. It uses most of the combat hooks.
 - **[Prequel Robes](examples/prequel-robes.md)**: nine new robes added beside the game's own.
-- **Starter Mod, Speedrun, Injuries, Power Cells, Pacifist Run and Lightsaber Duelist**: short mods on the public
-  hooks, in the examples folder beside this wiki. Each starts switched off.
+- **Starter Mod**: a template to copy and edit, in the `mods` folder beside the game (and the examples folder beside
+  this wiki). It starts switched off. The two above are described here but aren't in the download.
 
 > [!NOTE]
 > **The rule every mod follows**

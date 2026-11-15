@@ -1,6 +1,7 @@
 # Hardcore
 
-The test mod for mod support. Source: `modding/examples/hardcore`; packed as `modding/examples/dist/hardcore.zip`.
+The test mod for mod support, kept in the game's project (`modding/examples/hardcore`) and not in the download: this page
+shows how it's made.
 
 ## What it does
 

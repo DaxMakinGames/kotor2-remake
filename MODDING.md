@@ -31,9 +31,9 @@ mod over** (`guides/porting.md`).
 
 | Kind of mod | How | Example |
 |---|---|---|
-| Harder or easier play | Hooks on damage, accuracy, healing, XP, Force costs | Hardcore (`modding/examples/hardcore`) |
+| Harder or easier play | Hooks on damage, accuracy, healing, XP, Force costs | Hardcore (below) |
 | A game mode | New-game choices, events and the mod's own saved state | Hardcore's Ironman |
-| New items and outfits | `add_item()`, beside the game's own items, with their own icons and textures | Prequel Robes (`modding/examples/prequel_robes`) |
+| New items and outfits | `add_item()`, beside the game's own items, with their own icons and textures | Prequel Robes (in progress) |
 | Different story logic | Replace or wrap one of the original game's script functions | `script_function()` |
 | Texture overhauls | A `textures` folder that replaces the game's textures by name | The HD packs Setup makes |
 | New models | A `models` folder of `.glb` files that replace rooms, props, bodies, heads and weapons by name | A reshaped prop or weapon |
@@ -68,7 +68,8 @@ A mod's settings are also under **Options → Mod settings**. New-game choices (
 
 ## Making a mod, step by step
 
-**The quickest start** is to copy the Starter Mod (`modding/examples/starter`): rename the folder and its `id` in
+**The quickest start** is to copy the Starter Mod (`modding/examples/starter`; Setup also puts it in the `mods` folder
+beside the game): rename the folder and its `id` in
 `mod.json`, turn it on in **Mods**, and edit its `main.gd`. Turning a mod off and on again reloads it, with no restart.
 Or build one from nothing:
 
@@ -383,10 +384,11 @@ replaces files from its own `.pck` or `.zip`, or changes behavior through hooks.
 ## More examples: Starter Mod and five gameplay mods
 
 **Starter Mod** (`modding/examples/starter`) is a template to copy: a setting, a hook, events and saved state, each
-commented. It starts switched off.
+commented. It starts switched off. It's the one example players get: Setup puts it in the `mods` folder beside the game,
+and never over a copy the player has changed.
 
-`modding/examples/` also has five mods that start switched off (`default_on: false`), each a short `main.gd` on the public
-hooks, tested in `tools/gameplay_mods_test.gd`:
+The game's project also has five gameplay mods, written to test the hooks (`tools/gameplay_mods_test.gd`). They aren't
+in the download; they're here as ideas, with the hooks each one is built on:
 
 | Mod | What it does | What it shows |
 |---|---|---|
@@ -396,11 +398,10 @@ hooks, tested in `tools/gameplay_mods_test.gd`:
 | Pacifist Run (`pacifist`) | No XP for kills, more for the story, XP for enemies spared | `xp_award`'s source, `level_leaving`, a new-game choice |
 | Lightsaber Duelist (`saber_duelist`) | A saber deflects bolts and sends some back; saber duels and blows get bonuses | `deflect_chance`, `deflected`, `KotorCombat.hurt` |
 
-Pack one with `modding/tools/pack_mod.sh modding/examples/<id>` and drop the `.zip` in the mods folder.
 
 ## Example: Hardcore
 
-`modding/examples/hardcore`, packed into `modding/examples/dist/hardcore.zip`.
+The test mod for mod support, in the game's project (`modding/examples/hardcore`; not in the download).
 
 | Setting | Default | Hook |
 |---|---|---|
