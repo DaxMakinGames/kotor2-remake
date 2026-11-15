@@ -65,12 +65,20 @@ You don't need to do them all, or in order. Even "I checked X and it was fine" i
 - [ ] Prompts name the controller's buttons.
 
 ### 11. The new options
-**Where:** Options → Gameplay and Accessibility, the Party page, the map.
+**Where:** Options (Graphics, Gameplay, Accessibility and Controls tabs), the Party page, the map.
 - [ ] Companion tactics (Party page) change how a companion fights: staying back, medpacs, Force powers.
 - [ ] Auto-pause and Space/B pause fights at the right moments, and don't get in the way.
 - [ ] Larger text and the readable font make menus easier to read, without cutting anything off.
+- [ ] The map shows only the rooms you've walked through, and fills in as you explore.
+- [ ] Picking a lock plays a dice check (with a Security Tunneler's +6 when it's what gets you in).
 
-### 12. Mods (optional)
+### 12. Effects
+**Where:** Options → Gameplay → Effects (Classic or Enhanced) and Effects quality.
+- [ ] Enhanced looks better than Classic and never washes the rooms out or hides what's going on.
+- [ ] Lightsabers, blaster fire, grenades and shields look right, and big fights stay smooth.
+- [ ] Classic looks like the game always did.
+
+### 13. Mods (optional)
 **Where:** title screen → Mods.
 - [ ] Switching the HD texture mods off and on (then Restart to apply) swaps between standard and sharp textures.
 - [ ] Saving a collection and switching to it brings back the same mods.

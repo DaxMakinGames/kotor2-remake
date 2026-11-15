@@ -32,6 +32,9 @@ The full guide, with a page for every hook and step-by-step tutorials, is the **
 | New items and outfits | `add_item()`, beside the game's own items, with their own icons and textures | Prequel Robes (`mods_examples/prequel_robes`) |
 | Different story logic | Replace or wrap one of the original game's script functions | `script_function()` |
 | Texture overhauls | A `textures` folder that replaces the game's textures by name | The HD packs Setup makes |
+| New models | A `models` folder of `.glb` files that replace rooms, props, bodies, heads and weapons by name | A reshaped prop or weapon |
+| New voices, sounds and music | A `sounds` folder: a voice line, effect or music track by its name | A recast voice, a new soundtrack |
+| New or rewritten conversations | A `conversations` folder of `.dialogue` files, by the conversation's name | A rewritten talk, or a new one a script starts |
 
 Mods **add** and **hook**: they never edit the game's files. That's what lets several mods run together and be switched
 off cleanly.
@@ -50,8 +53,9 @@ off cleanly.
 2. Open **Mods** on the title screen. Every mod found is listed with its version, description and any problems.
    **Open mods folder** there makes the folder if it isn't there yet.
 3. Turn mods on or off with the switch beside each one, and set their load order (**Load earlier**, **Load later**, or
-   **Find best order**, which sorts them by what each mod asks). Then press **Restart to apply**. A mod's settings
-   take effect at once.
+   **Find best order**, which sorts them by what each mod asks). Changes take effect at once, with no restart: what's
+   already in a level (its models and textures) changes when a level next loads. A mod that says it needs a restart
+   (`needs_restart`) gets a **Restart** button instead.
 4. **Collections** save the mods you have on, and their order, under a name ("Hardcore playthrough", "HD overhaul").
    Pick one from the list at the top to switch to it.
 
@@ -103,6 +107,9 @@ A mod's settings are also under **Options → Mod settings**. New-game choices (
 | `replaces` | Files its `.pck` or `.zip` replaces, so two mods replacing the same file are reported |
 | `load_before` | Mods this one must load before. **Find best order** on the Mods screen sorts by both |
 | `textures` | A folder of pictures that replace the game's textures **by name** (see Texture overhauls). Optional |
+| `models`, `sounds`, `conversations` | Folders of files that replace the game's models, sounds and conversations **by name** (see Replacing models, sounds and conversations). Optional |
+| `default_on` | `false` to start switched off when a player first finds the mod, so it changes nothing until they turn it on. Optional (on by default) |
+| `needs_restart` | `true` if turning the mod on or off only works after a restart (it changes something it can't undo when taken out). Optional |
 | `icon` | A square picture shown beside the mod's name (PNG, JPG or WebP; 256 × 256 is plenty). Optional |
 | `pictures` | Screenshots for the mod's page, which players scroll through: `["pictures/1.png", "pictures/2.png"]`. Optional |
 
@@ -206,6 +213,29 @@ downloads (`step62_hd_mods.py`, then `install.py` packs them into `planets_hd.zi
 textures the game uses go in, and none that the Peragus fix mods supply. The base game keeps the standard textures.
 On the development machine the packs are still built into the project (`hd_in_base` in `pipeline_paths.py`).
 
+## Replacing models, sounds and conversations
+
+These work like textures: a folder named in `mod.json`, and each file replaces the game's one with the same name (lower
+case, no extension). Later mods in the load order win, and turning the mod off brings the game's own back.
+
+```json
+{ "id": "my_swaps", "name": "My swaps", "version": "1.0.0", "api": 1, "entry": "",
+  "models": "models", "sounds": "sounds", "conversations": "conversations" }
+```
+
+- **Models** (`.glb` or `.gltf`; a packed mod can also use `.tscn`/`.scn`): rooms, props, bodies, heads and weapons, by
+  the game's model name (`plc_footlker.glb`, `dor_per01.glb`, `p_atton_body`'s body model, `w_blstrpstl_001.glb`).
+  Meshes named as in the original get the game's own textures and lightmaps; any other mesh is drawn with its own
+  material. A level's layout and walkable floor stay the game's: a room model changes how the room looks, not where you
+  can walk. Characters keep the original skeleton's bone names, or animations won't fit.
+- **Sounds** (`.ogg`, `.wav` or `.mp3`): voice lines by their resref (`101101atton001`), sound effects by theirs, music
+  tracks by theirs. Each is read when it plays.
+- **Conversations** (`.dialogue`): by the conversation's name (`101atton`). Write them in the format the game's own
+  conversations use (look in `import/kotor/dialogue/`): each line calls `Kotor.on_line(...)` for its voice and camera,
+  and replies can run the game's scripts. A conversation with a new name can be started from a mod's script.
+- A folder mod's models and conversations are read as the game runs; a packed mod's (`tools/pack_art_mod.py`) are
+  imported, which loads faster.
+
 ## Current limitations
 
 What a mod **can't** do yet. Most of these are planned; some may never be, since the aim is to recreate the
@@ -215,12 +245,9 @@ original engine, not to rebuild it.
 |---|---|
 | **Only the demo exists**: Peragus (101–107) and the Harbinger (151–153). No other planets, no new areas | Mods that hook rules and items work everywhere the game goes later |
 | **No new levels or areas.** A mod can't add a level or change a level's layout | Change what happens in a level through hooks and script functions |
-| **Models can't be replaced**, by name or by path. Only textures can | New items wear the game's own bodies with their own textures (Prequel Robes) |
-| **Voices, music and sounds can't be replaced** | Play your own sounds from your mod's script |
-| **Conversations can't be added or edited** directly | Wrap a script function, or change globals the conversation checks |
-| **Hooks exist for 30 decisions** (the tables below). Stores and prices, party influence, alignment and minigames have none yet | Ask for a hook: each one is a small change in the game |
+| **A replaced model can't move walls or floors**: the walkable layout comes from the game's walkmesh | Change how a room looks, not its shape underfoot |
+| **Hooks exist for 35 decisions** (the tables below). Stores and prices, party influence, alignment and minigames have none yet | Ask for a hook: each one is a small change in the game |
 | **A folder mod's `main.gd` is read as source**: no `class_name`, no `preload` of files beside it | `load(mod_path("..."))`, or pack it into a `.zip` |
-| **Turning mods on or off needs a restart** | Settings and new-game choices change at once |
 | **Mac only for now**; a Windows build comes later | |
 | **The API is version 1 and may change** before 1.0 | Keep `api` in `mod.json` accurate; a mod for a newer API isn't loaded |
 
@@ -250,6 +277,7 @@ with an error that says why.
 | `level_leaving` | event | `module, to` | `Kotor.request_transition` |
 | `heartbeat` | event | `seconds` (6) | `kotor_world_events.gd`, every round, not during conversations |
 | `paused` | event | `open: bool` | Pause menu opening and closing |
+| `run_finished` | event | (none) | The end of what's playable: the demo's end screen |
 | `can_load` | modifier | `bool` | Pause menu's Load, and the game-over screen (`false` there offers a new game instead) |
 
 ### Combat and survival
@@ -259,6 +287,10 @@ with an error that says why.
 | `attack_bonus` | modifier | `int`, ctx `{attacker, target}` | `KotorCombat._attack_bonus` |
 | `defense` | modifier | `int`, ctx `{victim}` | `KotorCombat._defense` |
 | `damage_dealt` | modifier | `int`, ctx `{attacker, victim, type}` | `KotorCombat._take_damage`, after resistances. Every kind of damage passes here: blows, grenades, powers, scripts |
+| `can_attack` | modifier | `bool`, ctx `{attacker, target, weapon}` | `KotorCombat.resolve`, before the roll. `false` holds the attack back |
+| `attack_made` | event | `attacker, target, hits` | `KotorCombat.resolve`, after the roll |
+| `deflect_chance` | modifier | `float` 0 to 1, ctx `{victim, attacker}` | A ranged hit that could be turned aside (Force Deflect gives some) |
+| `deflected` | event | `victim, attacker, damage` | A bolt turned aside, with the damage it would have done |
 | `damaged` | event | `attacker, victim, amount` | After damage is taken |
 | `died` | event | `who, killer` | `KotorCombat._die` |
 | `player_down` | event | (none) | `Kotor._player_down` |
@@ -271,7 +303,7 @@ with an error that says why.
 
 | Hook | Kind | Arguments / value | Called from |
 |---|---|---|---|
-| `xp_award` | modifier | `int` | `Kotor.give_xp`, for kills and the story's XP. `0` gives none |
+| `xp_award` | modifier | `int`, ctx `{source, victim}`: `source` is `"kill"` (with the `victim`), `"story"` or a mod's own | `Kotor.give_xp`. `0` gives none |
 | `skill` | modifier | `int`, ctx `{key, skill}` | `Kotor.stats.skill` (skill index as in `rules.json`) |
 | `force_cost` | modifier | `int`, ctx `{key, power}` | `Kotor.force.cost_of` |
 | `level_up` | event | `key, level` | `Kotor.stats.apply_level_up` |
@@ -327,6 +359,21 @@ What's already data, and can change without code:
 `import/` is built by the pipeline in `~/Documents/kotor-pipeline` and gets overwritten. A mod must never edit it. It
 replaces files from its own `.pck` or `.zip`, or changes behavior through hooks.
 
+## More examples: five gameplay mods
+
+`mods_examples/` also has five mods that start switched off (`default_on: false`), each a short `main.gd` on the public
+hooks, tested in `tools/gameplay_mods_test.gd`:
+
+| Mod | What it does | What it shows |
+|---|---|---|
+| Speedrun (`speedrun`) | A timer that skips loading and pauses, splits per level, a personal best | A HUD of its own, `level_loaded`, `run_finished`, a file kept between games |
+| Injuries (`injuries`) | Heavy blows leave injuries with penalties until a medical station treats them | `damaged`, penalties through `attack_bonus`, `defense`, `damage_dealt` and `skill`, per-character save data |
+| Power Cells (`power_cells`) | Blasters use charge from power cells, found in containers and on gunmen | A new item, `can_attack` and `attack_made`, `container_opened` |
+| Pacifist Run (`pacifist`) | No XP for kills, more for the story, XP for enemies spared | `xp_award`'s source, `level_leaving`, a new-game choice |
+| Lightsaber Duelist (`saber_duelist`) | A saber deflects bolts and sends some back; saber duels and blows get bonuses | `deflect_chance`, `deflected`, `KotorCombat.hurt` |
+
+Pack one with `tools/pack_mod.sh mods_examples/<id>` and drop the `.zip` in the mods folder.
+
 ## Example: Hardcore
 
 `mods_examples/hardcore`, packed into `mods_examples/dist/hardcore.zip`.
@@ -370,7 +417,8 @@ replaces files from its own `.pck` or `.zip`, or changes behavior through hooks.
 - [x] Hook calls in the places listed above, tested in `tools/mod_test.gd`
 - [x] Each mod's section in the save, and a warning when the mod list differs on load
 - [x] Mod settings in Options and on the Mods screen; choices on the new-game screen
-- [x] A Mods screen on the title menu: on and off, load order, conflicts, restart to apply
+- [x] A Mods screen on the title menu: on and off, load order, conflicts; changes apply with no restart
+- [x] Replacing models, sounds and conversations by name (`models`, `sounds`, `conversations`), tested in `tools/mod_test.gd`
 - [x] Hardcore in `mods_examples/`, packed by `tools/pack_mod.sh`, used by the test
 - [x] Export: an exported build loads a `.zip` from the `mods` folder beside the game. To check again: make
   `res://tools/mod_export_check.tscn` the main scene, take `tools/*` out of the preset's exclude filter, export, put

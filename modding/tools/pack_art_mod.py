@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Packs a mod that has pictures or other art into <id>.zip, imported the way the game's own files are.
+"""Packs a mod that has pictures, models or sounds into <id>.zip, imported the way the game's own files are.
 
     python3 tools/pack_art_mod.py <mod folder> [out dir] [--godot /path/to/Godot]
 

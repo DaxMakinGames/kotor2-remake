@@ -140,6 +140,10 @@ I'm keeping this light on purpose. The original's look and rules come first.
 - [x] A combat pause (Space, or B), and auto-pause when a fight starts or someone in the party falls
 - [x] Companion tactics per companion: when to use a medpac, chase or stay back, which Force powers
 - [x] Text size, a readable font (OpenDyslexic if installed), and camera shake options
+- [x] Enhanced effects (Classic keeps the original's): glow, filmic tone mapping and soft shadowing in corners;
+      lightsabers that light the room; glowing blaster bolts and scorch marks; layered explosions with a look per
+      grenade type; hit flashes and shield ripples ([VFX plan](VFX_PLAN.md))
+- [ ] Enhanced Force powers, holograms, steam and screens (the rest of the VFX plan)
 - [ ] Better lighting where the original's lighting is broken
 - [ ] Menus checked on widescreen and high-resolution displays
 
