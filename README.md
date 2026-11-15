@@ -30,14 +30,11 @@ later.
 1. **Have KOTOR 2** installed from Steam or GOG.
 2. **Download TSLRCM** (free, required): [TSLRCM 1.8.6 on GameBanana](https://gamebanana.com/mods/617353). Leave it in
    your Downloads folder: Setup unpacks it by itself (the `.7z` too), so there's nothing to unzip.
-3. **Optional, for sharper textures:** [Vanilla Planets HD](https://deadlystream.com/files/file/2976-vanilla-planets-hd/)
-   and [Vanilla Characters HD](https://deadlystream.com/files/file/2987-vanilla-characters-hd-optimized/), into
-   Downloads too. They become mods you can switch off at any time.
-4. **Open the dmg and run KOTOR 2 Remake Setup.** It isn't signed by Apple, so the first time macOS says it can't
+3. **Open the dmg and run KOTOR 2 Remake Setup.** It isn't signed by Apple, so the first time macOS says it can't
    check it: click **Done**, open **System Settings → Privacy & Security**, scroll down and click **Open Anyway** next
-   to KOTOR 2 Remake Setup, then confirm. Setup checks everything and shows one **Install** button. If something's missing, it says what
-   and updates by itself once you've downloaded it.
-5. **Wait.** The first build takes an hour or more: Setup converts the game's levels from your copy. Then press
+   to KOTOR 2 Remake Setup, then confirm. Setup walks you through a few short pages (your game, mods, then
+   **Install**). If something's missing, it says what and updates by itself once you've downloaded it.
+4. **Wait.** The first build takes an hour or more: Setup converts the game's levels from your copy. Then press
    **Play**.
 
 **Updating:** download the new Setup and run it. If your game data is still current, it says **Update** and only
