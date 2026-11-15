@@ -1,0 +1,11 @@
+{
+  "id": "power_cells",
+  "name": "Power Cells",
+  "version": "1.0.0",
+  "author": "KOTOR 2 remake",
+  "description": "Blasters run on power cells. Each cell is good for a number of shots, and a fresh one goes in by itself when the last runs dry; with none left, a blaster won't fire. Cells turn up in containers and on fallen gunmen.",
+  "icon": "icon.png",
+  "api": 1,
+  "entry": "main.gd",
+  "default_on": false
+}

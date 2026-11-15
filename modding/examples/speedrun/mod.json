@@ -1,0 +1,11 @@
+{
+  "id": "speedrun",
+  "name": "Speedrun",
+  "version": "1.0.0",
+  "author": "KOTOR 2 remake",
+  "description": "An in-game timer in the corner: it stops for loading screens and the pause menu, splits at every level you reach, and compares each split with your personal best. The run ends at the demo's end screen.",
+  "icon": "icon.png",
+  "api": 1,
+  "entry": "main.gd",
+  "default_on": false
+}

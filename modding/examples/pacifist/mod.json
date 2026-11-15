@@ -1,0 +1,11 @@
+{
+  "id": "pacifist",
+  "name": "Pacifist Run",
+  "version": "1.0.0",
+  "author": "KOTOR 2 remake",
+  "description": "Killing earns nothing: kills give no experience, while the story's rewards give more. Every enemy you fought and left alive when you leave a level is worth experience for sparing them. The run keeps count of your kills and tells you how you did at the end.",
+  "icon": "icon.png",
+  "api": 1,
+  "entry": "main.gd",
+  "default_on": false
+}

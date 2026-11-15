@@ -1,0 +1,10 @@
+{
+  "id": "starter",
+  "name": "Starter Mod",
+  "version": "1.0.0",
+  "author": "you",
+  "description": "A template to copy: a setting, a hook that changes a number, events, and saved state. Copy this folder, rename it and the id, and make it yours.",
+  "api": 1,
+  "entry": "main.gd",
+  "default_on": false
+}

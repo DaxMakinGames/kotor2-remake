@@ -7,8 +7,10 @@
 > modernizing its systems more than needed. Mod support follows the same idea: it gives you hooks into the original
 > rules rather than a new game. Expect the modding API to change before 1.0.
 
-The full guide, with a page for every hook and step-by-step tutorials, is the **modding wiki** in `modding_wiki/`
-(`modding_wiki/docs/engine/publishing.md` says how to preview it). This file is the short version.
+The full guide, with a page for every hook, recipes and step-by-step tutorials, is the **modding wiki**: `modding/wiki/`
+in the download repository (`modding_wiki/docs/` in the game's project). This file is the short version. Good places to
+start there: **Your first mod** (`getting-started/first-mod.md`), **Recipes** (`guides/recipes.md`) and **Bring a KOTOR
+mod over** (`guides/porting.md`).
 
 **Contents**
 1. [What a mod can do](#what-a-mod-can-do)
@@ -16,20 +18,22 @@ The full guide, with a page for every hook and step-by-step tutorials, is the **
 3. [Making a mod, step by step](#making-a-mod-step-by-step)
 4. [Packing and sharing](#packing-and-sharing)
 5. [Texture overhauls](#texture-overhauls)
-6. [Current limitations](#current-limitations)
-7. [Rules for mod authors](#rules-for-mod-authors)
-8. [Hook reference](#hook-reference)
-9. [How the game is put together](#how-the-game-is-put-together)
-10. [Example: Hardcore](#example-hardcore)
-11. [Status of mod support](#status-of-mod-support)
+6. [Replacing models, sounds and conversations](#replacing-models-sounds-and-conversations)
+7. [Current limitations](#current-limitations)
+8. [Rules for mod authors](#rules-for-mod-authors)
+9. [Hook reference](#hook-reference)
+10. [How the game is put together](#how-the-game-is-put-together)
+11. [More examples: Starter Mod and five gameplay mods](#more-examples-starter-mod-and-five-gameplay-mods)
+12. [Example: Hardcore](#example-hardcore)
+13. [Status of mod support](#status-of-mod-support)
 
 ## What a mod can do
 
 | Kind of mod | How | Example |
 |---|---|---|
-| Harder or easier play | Hooks on damage, accuracy, healing, XP, Force costs | Hardcore (`mods_examples/hardcore`) |
+| Harder or easier play | Hooks on damage, accuracy, healing, XP, Force costs | Hardcore (`modding/examples/hardcore`) |
 | A game mode | New-game choices, events and the mod's own saved state | Hardcore's Ironman |
-| New items and outfits | `add_item()`, beside the game's own items, with their own icons and textures | Prequel Robes (`mods_examples/prequel_robes`) |
+| New items and outfits | `add_item()`, beside the game's own items, with their own icons and textures | Prequel Robes (`modding/examples/prequel_robes`) |
 | Different story logic | Replace or wrap one of the original game's script functions | `script_function()` |
 | Texture overhauls | A `textures` folder that replaces the game's textures by name | The HD packs Setup makes |
 | New models | A `models` folder of `.glb` files that replace rooms, props, bodies, heads and weapons by name | A reshaped prop or weapon |
@@ -63,6 +67,10 @@ A mod's settings are also under **Options → Mod settings**. New-game choices (
 **New Game**. Every save records which mods made it, and loading a save made with different mods tells you so.
 
 ## Making a mod, step by step
+
+**The quickest start** is to copy the Starter Mod (`modding/examples/starter`): rename the folder and its `id` in
+`mod.json`, turn it on in **Mods**, and edit its `main.gd`. Turning a mod off and on again reloads it, with no restart.
+Or build one from nothing:
 
 1. **Make a folder** named after your mod's id, in the project's `mods/` folder while you work on it:
 
@@ -164,7 +172,7 @@ where the game mounts it (`res://mods/<id>/...`), and only while the mod is on.
 
 | Your mod has | Pack it with | Why |
 |---|---|---|
-| Only scripts and JSON | `tools/pack_mod.sh <mod folder>` | A plain zip is enough: the game reads `main.gd` and JSON as they are |
+| Only scripts and JSON | `modding/tools/pack_mod.sh <mod folder>` | A plain zip is enough: the game reads `main.gd` and JSON as they are |
 | Pictures, icons or textures | `python3 tools/pack_art_mod.py <mod folder>` | Pictures must go through Godot's import, or an exported game can't load them |
 
 Both write `<id>.zip` to `dist/` beside the mod folder (or to a folder you give as the second argument).
@@ -202,10 +210,13 @@ Every picture in `textures/` replaces the game's texture with the same name (low
 used: rooms, lightmaps, props, characters, weapons. `plc_desk1.png` replaces `plc_desk1`. If two mods replace the same
 texture, the one later in the load order wins (use `load_after`). Turn the mod off and the standard textures come back.
 
-- Pack it with `tools/pack_art_mod.py`, so the pictures are mipmapped and VRAM-compressed. A folder mod works too,
+- Pack it with `modding/tools/pack_art_mod.py`, so the pictures are mipmapped and VRAM-compressed. A folder mod works too,
   but its pictures are read uncompressed every time the game starts: slow, and heavy on memory for HD textures.
-- Pictures are used as they are: keep the original's orientation. (The pipeline flips two prop textures, `plc_desk1`
-  and `plc_comppnl_b`; a replacement for those must be flipped the same way.)
+- Pictures are used as they look in an image viewer. Two props show theirs flipped, `plc_desk1` and `plc_comppnl_b`,
+  so a replacement for those must be flipped the same way.
+- **Textures made for the original game** (`.tga`, and its own kind of `.dds`): `python3 modding/tools/kotor_texture_to_png.py
+  <files or folder> --out <mod>/textures` makes `.png` files the right way up, those two flipped. More in the wiki's
+  **Bring a KOTOR mod over**.
 - A texture's TXI settings (transparency, animation) come from the game's original.
 
 **Vanilla Planets HD and Vanilla Characters HD** are made into two such mods on the player's computer, from their own
@@ -231,9 +242,10 @@ case, no extension). Later mods in the load order win, and turning the mod off b
 - **Sounds** (`.ogg`, `.wav` or `.mp3`): voice lines by their resref (`101101atton001`), sound effects by theirs, music
   tracks by theirs. Each is read when it plays.
 - **Conversations** (`.dialogue`): by the conversation's name (`101atton`). Write them in the format the game's own
-  conversations use (look in `import/kotor/dialogue/`): each line calls `Kotor.on_line(...)` for its voice and camera,
+  conversations use (in the game's project, `import/kotor/dialogue/`; an installed game doesn't keep a copy you can
+  read yet): each line calls `Kotor.on_line(...)` for its voice and camera,
   and replies can run the game's scripts. A conversation with a new name can be started from a mod's script.
-- A folder mod's models and conversations are read as the game runs; a packed mod's (`tools/pack_art_mod.py`) are
+- A folder mod's models and conversations are read as the game runs; a packed mod's (`modding/tools/pack_art_mod.py`) are
   imported, which loads faster.
 
 ## Current limitations
@@ -262,67 +274,76 @@ original engine, not to rebuild it.
 ## Hook reference
 
 The list is `KotorMods.HOOKS`, so asking for a hook that doesn't exist, or using `on()` with a modifier, is refused
-with an error that says why.
+with an error that says why. Each hook has a page in the wiki (`reference/hooks/`) with its types, what's in `ctx`,
+and an example. The tables below are written from the same descriptions, so they match the game.
 
 - **Modifiers** run as a chain: every mod that hooked one gets the value in load order and returns it, changed or not.
   Change the value you're given rather than computing one from scratch, so other mods' changes survive.
 - **Events** tell every listening mod that something happened.
 
+<!-- hooks: start (written by modding_wiki/build_hooks.py) -->
+
 ### Game flow
 
-| Hook | Kind | Arguments / value | Called from |
+| Hook | Kind | Value or arguments | What it's for |
 |---|---|---|---|
-| `game_started` | event | `new_game: bool` | Character creation finishing (`true`), a save finishing loading (`false`) |
-| `level_loaded` | event | `module` | `room_loader.gd` once the level is up |
-| `level_leaving` | event | `module, to` | `Kotor.request_transition` |
-| `heartbeat` | event | `seconds` (6) | `kotor_world_events.gd`, every round, not during conversations |
-| `paused` | event | `open: bool` | Pause menu opening and closing |
-| `run_finished` | event | (none) | The end of what's playable: the demo's end screen |
-| `can_load` | modifier | `bool` | Pause menu's Load, and the game-over screen (`false` there offers a new game instead) |
+| `game_started` | event | `new_game: bool` | A game has begun: a new one, once character creation finishes, or a saved one, once it has finished loading. |
+| `level_loaded` | event | `module: String` | A level has finished loading and the player is in it. |
+| `level_leaving` | event | `module: String, to: String` | The player is about to leave a level for another one. |
+| `heartbeat` | event | `seconds: float` | Every six-second round of play, the original game's own heartbeat. Not during conversations. |
+| `paused` | event | `open: bool` | The pause menu has opened or closed. |
+| `run_finished` | event | (none) | The end of what's playable: the demo's end screen, as the story leaves for the Ebon Hawk. |
+| `can_load` | modifier | `bool` | Whether the player may load a save mid-game: the pause menu's Load button, and the game-over screen's Load Checkpoint. |
 
 ### Combat and survival
 
-| Hook | Kind | Arguments / value | Called from |
+| Hook | Kind | Value or arguments | What it's for |
 |---|---|---|---|
-| `attack_bonus` | modifier | `int`, ctx `{attacker, target}` | `KotorCombat._attack_bonus` |
-| `defense` | modifier | `int`, ctx `{victim}` | `KotorCombat._defense` |
-| `damage_dealt` | modifier | `int`, ctx `{attacker, victim, type}` | `KotorCombat._take_damage`, after resistances. Every kind of damage passes here: blows, grenades, powers, scripts |
-| `can_attack` | modifier | `bool`, ctx `{attacker, target, weapon}` | `KotorCombat.resolve`, before the roll. `false` holds the attack back |
-| `attack_made` | event | `attacker, target, hits` | `KotorCombat.resolve`, after the roll |
-| `deflect_chance` | modifier | `float` 0 to 1, ctx `{victim, attacker}` | A ranged hit that could be turned aside (Force Deflect gives some) |
-| `deflected` | event | `victim, attacker, damage` | A bolt turned aside, with the damage it would have done |
-| `damaged` | event | `attacker, victim, amount` | After damage is taken |
-| `died` | event | `who, killer` | `KotorCombat._die` |
-| `player_down` | event | (none) | `Kotor._player_down` |
-| `regen_rate` | modifier | `float` health per second, ctx `{who}` | `Kotor._recover`, out of combat |
-| `shield_rate` | modifier | `float` per second | `Kotor._recover` |
-| `heal_amount` | modifier | `int`, ctx `{item, who}` | Using a medpac or repair kit |
-| `enemy_think` | modifier | `float` seconds between decisions | `KotorEnemyAI` |
+| `attack_bonus` | modifier | `int`, ctx `{attacker, target}` | The attack bonus for one attack roll, the d20 roll plus this against the target's defense. |
+| `defense` | modifier | `int`, ctx `{victim}` | Someone's defense, what an attack roll must reach to hit them. |
+| `damage_dealt` | modifier | `int`, ctx `{attacker, victim, type}` | Damage about to be taken, after resistances. Every kind passes here: blows, shots, grenades, Force powers and scripts. |
+| `can_attack` | modifier | `bool`, ctx `{attacker, target, weapon}` | Whether an attack happens at all, asked before the roll. Return false to hold it back. |
+| `attack_made` | event | `attacker: Node3D, target: Node3D, hits: bool` | An attack roll has been made against a creature, and whether it hit. |
+| `deflect_chance` | modifier | `float`, ctx `{victim, attacker}` | The chance that a ranged hit is turned aside by its target. |
+| `deflected` | event | `victim: Node3D, attacker: Node3D, damage: int` | A bolt was turned aside, with the damage it would have done. |
+| `damaged` | event | `attacker: Node3D, victim: Node3D, amount: int` | Someone has taken damage. |
+| `died` | event | `who: Node3D, killer: Node3D` | A creature has died (not a party member going down). |
+| `player_down` | event | (none) | The player has fallen. Unless a mod steps in, a companion can come and revive them. |
+| `regen_rate` | modifier | `float`, ctx `{who}` | How fast health comes back out of combat, in points per second. |
+| `shield_rate` | modifier | `float` | How fast the player's shield recharges, in points per second. |
+| `heal_amount` | modifier | `int`, ctx `{item, who}` | How much a medpac or repair kit heals. |
+| `enemy_think` | modifier | `float` | Seconds between the enemies' decisions: who to fight, where to move, when to throw. |
 
 ### Character and progress
 
-| Hook | Kind | Arguments / value | Called from |
+| Hook | Kind | Value or arguments | What it's for |
 |---|---|---|---|
-| `xp_award` | modifier | `int`, ctx `{source, victim}`: `source` is `"kill"` (with the `victim`), `"story"` or a mod's own | `Kotor.give_xp`. `0` gives none |
-| `skill` | modifier | `int`, ctx `{key, skill}` | `Kotor.stats.skill` (skill index as in `rules.json`) |
-| `force_cost` | modifier | `int`, ctx `{key, power}` | `Kotor.force.cost_of` |
-| `level_up` | event | `key, level` | `Kotor.stats.apply_level_up` |
-| `item_added` / `item_removed` | event | `resref, count` | `Kotor.add_item` / `remove_item` |
-| `can_equip` | modifier | `bool`, ctx `{key, slot, resref}` | `Kotor.stats.equip` |
-| `crafting_cost` | modifier | `int`, ctx `{station, item}` | `Kotor.crafting.cost_to_make` |
+| `xp_award` | modifier | `int`, ctx `{source, victim}` | Experience about to be given, for a kill or by the story. |
+| `skill` | modifier | `int`, ctx `{key, skill}` | A character's total in a skill, used everywhere the game checks one: locks, computers, crafting, conversation. |
+| `force_cost` | modifier | `int`, ctx `{key, power}` | What a Force power costs to use. |
+| `level_up` | event | `key: String, level: int` | Someone has taken a level. |
+| `item_added` | event | `resref: String, count: int` | Items have gone into the party's inventory. |
+| `item_removed` | event | `resref: String, count: int` | Items have left the party's inventory: used, sold, broken down or taken by a script. |
+| `can_equip` | modifier | `bool`, ctx `{key, slot, resref}` | Whether someone may put an item on. |
+| `crafting_cost` | modifier | `int`, ctx `{station, item}` | The components or chemicals an item takes to make at a workbench or lab station. |
 
 ### Story and world
 
-| Hook | Kind | Arguments / value | Called from |
+| Hook | Kind | Value or arguments | What it's for |
 |---|---|---|---|
-| `conversation_started` / `conversation_ended` | event | `conv, owner` / `conv` | `Kotor.start_dialogue` / when it ends |
-| `global_changed` | event | `name, value` | `Kotor.set_global`, `set_global_bool` |
-| `door_opened` | event | `door` | `door.gd` |
-| `container_opened` | event | `container` | `Kotor.begin_container` |
-| `script_run` | event | `script_name, owner` | `Kotor._run`, for every original script |
+| `conversation_started` | event | `conv: String, owner: Node` | A conversation has begun. |
+| `conversation_ended` | event | `conv: String` | A conversation has ended, after its last scripts ran. |
+| `global_changed` | event | `name: String, value: int` | One of the story's global numbers or booleans has changed. This is how the original scripts record progress. |
+| `door_opened` | event | `door: Node3D` | A door has opened, by anyone or any script. |
+| `container_opened` | event | `container: Node3D` | The player has opened a container: a footlocker, a corpse, a crate. |
+| `script_run` | event | `script_name: String, owner: Node` | One of the original game's scripts is about to run. |
 
-**Adding a hook** (for the game's own code, not a mod): to add one, put it in `KotorMods.HOOKS`, call `Kotor.mods.modify(...)` or `Kotor.mods.emit(...)` at the one place
-in the game where that decision is made, list it here, and test it in `tools/mod_test.gd`. With no mods,
+<!-- hooks: end -->
+
+**Adding a hook** (for the game's own code, not a mod): put it in `KotorMods.HOOKS`, call `Kotor.mods.modify(...)` or
+`Kotor.mods.emit(...)` at the one place in the game where that decision is made, describe it in
+`modding_wiki/data/hooks.json`, run `python3 modding_wiki/build_hooks.py` (it writes the wiki's page and the tables
+above, and stops if a hook has no description), and test it in `tools/mod_test.gd`. With no mods,
 `modify` hands the value straight back, so a hook costs nothing.
 
 ## How the game is put together
@@ -356,12 +377,15 @@ What's already data, and can change without code:
 | `import/kotor/dialogue/*.dialogue` | Conversations, with their conditions and scripts |
 | `import/kotor/<level>/ncs/*.ncs` | The original compiled scripts, run as they are |
 
-`import/` is built by the pipeline in `~/Documents/kotor-pipeline` and gets overwritten. A mod must never edit it. It
+`import/` is built by the pipeline (Setup runs it on the player's computer) and gets overwritten. A mod must never edit it. It
 replaces files from its own `.pck` or `.zip`, or changes behavior through hooks.
 
-## More examples: five gameplay mods
+## More examples: Starter Mod and five gameplay mods
 
-`mods_examples/` also has five mods that start switched off (`default_on: false`), each a short `main.gd` on the public
+**Starter Mod** (`modding/examples/starter`) is a template to copy: a setting, a hook, events and saved state, each
+commented. It starts switched off.
+
+`modding/examples/` also has five mods that start switched off (`default_on: false`), each a short `main.gd` on the public
 hooks, tested in `tools/gameplay_mods_test.gd`:
 
 | Mod | What it does | What it shows |
@@ -372,11 +396,11 @@ hooks, tested in `tools/gameplay_mods_test.gd`:
 | Pacifist Run (`pacifist`) | No XP for kills, more for the story, XP for enemies spared | `xp_award`'s source, `level_leaving`, a new-game choice |
 | Lightsaber Duelist (`saber_duelist`) | A saber deflects bolts and sends some back; saber duels and blows get bonuses | `deflect_chance`, `deflected`, `KotorCombat.hurt` |
 
-Pack one with `tools/pack_mod.sh mods_examples/<id>` and drop the `.zip` in the mods folder.
+Pack one with `modding/tools/pack_mod.sh modding/examples/<id>` and drop the `.zip` in the mods folder.
 
 ## Example: Hardcore
 
-`mods_examples/hardcore`, packed into `mods_examples/dist/hardcore.zip`.
+`modding/examples/hardcore`, packed into `modding/examples/dist/hardcore.zip`.
 
 | Setting | Default | Hook |
 |---|---|---|
@@ -419,7 +443,7 @@ Pack one with `tools/pack_mod.sh mods_examples/<id>` and drop the `.zip` in the 
 - [x] Mod settings in Options and on the Mods screen; choices on the new-game screen
 - [x] A Mods screen on the title menu: on and off, load order, conflicts; changes apply with no restart
 - [x] Replacing models, sounds and conversations by name (`models`, `sounds`, `conversations`), tested in `tools/mod_test.gd`
-- [x] Hardcore in `mods_examples/`, packed by `tools/pack_mod.sh`, used by the test
+- [x] Hardcore in `modding/examples/`, packed by `modding/tools/pack_mod.sh`, used by the test
 - [x] Export: an exported build loads a `.zip` from the `mods` folder beside the game. To check again: make
   `res://tools/mod_export_check.tscn` the main scene, take `tools/*` out of the preset's exclude filter, export, put
   `hardcore.zip` in `build/mods/`, run the app and look for `EXPORT CHECK: PASS`, then put both settings back
