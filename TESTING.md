@@ -77,6 +77,9 @@ You don't need to do them all, or in order. Even "I checked X and it was fine" i
       "Characters look at who's talking" turns it off).
 - [ ] Rooms echo by their size: a small room is tight, a corridor rings, a hangar booms.
 - [ ] After a fight, the level's music picks up where it left off instead of starting over.
+- [ ] Effects Enhanced at Medium or High: a light haze in the air with lamps glowing through it, surfaces that glint
+      when a saber or blaster lights them, and a softly blurred background behind whoever's talking. Nothing missing
+      from conversation shots, and rooms no darker or more washed out than Classic.
 
 ### 12. Effects
 **Where:** Options → Gameplay → Effects (Classic or Enhanced) and Effects quality.

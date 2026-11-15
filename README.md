@@ -5,10 +5,13 @@
 A fan remake of *Star Wars: Knights of the Old Republic II – The Sith Lords* in a modern engine.<br>
 It runs the original game's own levels, conversations and scripts, built on your computer from **your own copy** of the game.
 
+<img width="100%" alt="KOTOR 2 Remake" src="https://github.com/user-attachments/assets/a8e9cbd1-f9b6-405e-a0d7-b4107dbfbdad" />
+
 </div>
 
 > [!WARNING]
-> **Early demo: the first level only.** Peragus and the Harbinger, start to finish. Things are expected to be broken.
+> **Early access: the first level only.** Peragus and the Harbinger, start to finish, on Mac, Windows and Steam Deck.
+> Things are expected to be broken.
 > It's an engine recreation: the original game as it was, with only light modernization. See the
 > [roadmap](RELEASE_CHECKLIST.md) for what's done and what's next.
 
@@ -90,10 +93,19 @@ restart.
 
 ## Download
 
-Get **KOTOR2-Remake-Setup.dmg** from [Releases](../../releases) (Mac, Apple Silicon, macOS 14 or later). Windows comes
-later.
+From [Releases](../../releases), get the Setup for your system:
 
-## Install
+| System | Download | Install guide |
+|---|---|---|
+| **Mac** (Apple Silicon, macOS 14 or later) | `KOTOR2-Remake-Setup.dmg` | [below](#install-on-a-mac) |
+| **Windows** 10 or 11, 64-bit *(experimental)* | `KOTOR2-Remake-Setup-Windows.zip` | [INSTALL_WINDOWS.md](INSTALL_WINDOWS.md) |
+| **Steam Deck** and Linux *(experimental)* | `KOTOR2-Remake-Setup-Linux.tar.gz` | [INSTALL_STEAM_DECK.md](INSTALL_STEAM_DECK.md) |
+
+On every system you need your own copy of KOTOR 2 (Steam or GOG) and one free mod, TSLRCM. Setup builds the game from
+your copy on your computer, so the first install takes a while. **Windows and Steam Deck are experimental**: they're new
+and haven't been run on real hardware yet, so reports from them are especially welcome.
+
+## Install on a Mac
 
 1. **Have KOTOR 2** installed from Steam or GOG.
 2. **Download TSLRCM** (free, required): [TSLRCM 1.8.6 on GameBanana](https://gamebanana.com/mods/617353). Leave it in
@@ -105,10 +117,29 @@ later.
 4. **Wait.** The first build takes an hour or more: Setup converts the game's levels from your copy. Then press
    **Play**.
 
+On Windows or a Steam Deck, follow [INSTALL_WINDOWS.md](INSTALL_WINDOWS.md) or
+[INSTALL_STEAM_DECK.md](INSTALL_STEAM_DECK.md): the same Setup, with the steps for that system (on the Deck, including
+adding the game to Steam for Game Mode).
+
 **Updating:** download the new Setup and run it. If your game data is still current, it says **Update** and only
 replaces the game, in about a minute; your game data, mods, saves and settings stay as they are.
 
 Why these mods, and what each one does: [COMMUNITY_MODS.md](COMMUNITY_MODS.md).
+
+<table>
+  <tr>
+    <td width="50%"><img width="100%" alt="image" src="https://github.com/user-attachments/assets/526a6708-7255-41e1-97d8-43715a2c14bc" /></td>
+    <td width="50%"><img width="100%" alt="image" src="https://github.com/user-attachments/assets/c5de1805-398f-4925-8256-a45906224cf8" /></td>
+  </tr>
+  <tr>
+    <td width="50%"><img width="100%" alt="image" src="https://github.com/user-attachments/assets/25f2b1c3-5a4b-42fc-a619-1a8767d6cc9e" /></td>
+    <td width="50%"><img width="100%" alt="image" src="https://github.com/user-attachments/assets/c954e3b6-792a-4b85-966c-afb47ecb56c4" /></td>
+  </tr>
+  <tr>
+    <td width="50%"><img width="100%" alt="image" src="https://github.com/user-attachments/assets/52cd041b-c47b-4db2-a937-5b24f0264785" /></td>
+    <td width="50%"><img width="100%" alt="image" src="https://github.com/user-attachments/assets/8020374c-4b16-46b8-9152-183ad9f682d1" /></td>
+  </tr>
+</table>
 
 ---
 
