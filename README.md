@@ -20,6 +20,76 @@ It runs the original game's own levels, conversations and scripts, built on your
 
 ---
 
+## What it looks like
+
+<p align="center">
+  <img width="100%" alt="A lightsaber lighting up the medical bay on Peragus" src="screenshots/lightsaber.jpg" />
+</p>
+
+**Classic or Enhanced, your choice.** Classic looks exactly as the game always did. Enhanced adds light, glow and
+richer effects: a lightsaber colours the walls and whoever holds it, blaster bolts streak and light their way, and
+grenades go off with a flash, a fireball and smoke.
+
+<p align="center">
+  <img width="100%" alt="The same lightsaber with Effects set to Classic and to Enhanced" src="screenshots/classic_vs_enhanced.jpg" />
+</p>
+
+<table>
+  <tr>
+    <td width="50%"><img width="100%" alt="Force lightning" src="screenshots/force_lightning.jpg" /></td>
+    <td width="50%"><img width="100%" alt="A plasma grenade going off" src="screenshots/plasma_grenade.jpg" /></td>
+  </tr>
+  <tr>
+    <td align="center"><sub>Force powers</sub></td>
+    <td align="center"><sub>Grenades: frag, plasma, ion, cryoban and more, each with its own look</sub></td>
+  </tr>
+</table>
+
+**Make your Exile.** Choose your face, your Jedi path, your attributes and what's left of your training, and see what
+it all comes to as you go. Each path has its own colour.
+
+<table>
+  <tr>
+    <td width="50%"><img width="100%" alt="Character creation: face, gender and Jedi path" src="screenshots/character_creation.jpg" /></td>
+    <td width="50%"><img width="100%" alt="Character creation: Force powers and feats" src="screenshots/character_training.jpg" /></td>
+  </tr>
+  <tr>
+    <td align="center"><sub>Who were you?</sub></td>
+    <td align="center"><sub>What remains of your training?</sub></td>
+  </tr>
+</table>
+
+**Menus that explain themselves.** Your character, party, inventory, journal and map, laid out as cards. Point at any
+number to see how it's made up.
+
+<p align="center">
+  <img width="100%" alt="The Character page" src="screenshots/character_page.jpg" />
+</p>
+
+**Setup does the work.** It finds KOTOR 2 in Steam or GOG, tells you about the one free download it needs, and builds
+the game while you watch each level come together.
+
+<table>
+  <tr>
+    <td width="33%"><img width="100%" alt="Setup: welcome" src="screenshots/setup_welcome.jpg" /></td>
+    <td width="33%"><img width="100%" alt="Setup: mods, each with its own picture" src="screenshots/setup_mods.jpg" /></td>
+    <td width="33%"><img width="100%" alt="Setup: building the game, level by level" src="screenshots/setup_install.jpg" /></td>
+  </tr>
+  <tr>
+    <td align="center"><sub>Welcome</sub></td>
+    <td align="center"><sub>One download needed; the rest are optional upgrades</sub></td>
+    <td align="center"><sub>Watch it build, level by level</sub></td>
+  </tr>
+</table>
+
+Also in this demo: upscaling (MetalFX and FSR 2) for a sharper, smoother picture on a Mac, characters who turn to
+whoever's talking, rooms that echo by their size, controller support, and mods you can switch on and off without a
+restart.
+
+<sub>Screenshots from the demo on a Mac, Effects set to Enhanced.</sub>
+
+---
+
 ## Download
 
 Get **KOTOR2-Remake-Setup.dmg** from [Releases](../../releases) (Mac, Apple Silicon, macOS 14 or later). Windows comes
