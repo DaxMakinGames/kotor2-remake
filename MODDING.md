@@ -373,6 +373,7 @@ What's already data, and can change without code:
 |---|---|
 | `data/tuning.tres` (`KotorTuning`) | Feel numbers: enemy sight, grenade timing, crafting prices |
 | `data/locks.tres` (`KotorLockRules`) | What locks say and how long picking takes |
+| `data/uv_rules.json` | Texture placement fixes for particular models, meshes or textures: turn a picture over, scale or move it |
 | `import/kotor/rules.json` | The game's own rules from its tables: classes, skills, feats, powers, items, XP, crafting recipes, upgrades |
 | `import/kotor/<level>/*.json` | Each level's objects, triggers, waypoints, scripts, lights and walkmesh |
 | `import/kotor/dialogue/*.dialogue` | Conversations, with their conditions and scripts |

@@ -71,6 +71,12 @@ You don't need to do them all, or in order. Even "I checked X and it was fine" i
 - [ ] Larger text and the readable font make menus easier to read, without cutting anything off.
 - [ ] The map shows only the rooms you've walked through, and fills in as you explore.
 - [ ] Picking a lock plays a dice check (with a Security Tunneler's +6 when it's what gets you in).
+- [ ] Options → Graphics: **Upscaling** (MetalFX or FSR 2) at Quality or Balanced looks sharp and runs smoother, with no
+      smearing behind moving characters; **Anti-aliasing** smooths jagged edges.
+- [ ] In conversations, characters turn their heads to whoever is talking, without odd twists (Options → Graphics →
+      "Characters look at who's talking" turns it off).
+- [ ] Rooms echo by their size: a small room is tight, a corridor rings, a hangar booms.
+- [ ] After a fight, the level's music picks up where it left off instead of starting over.
 
 ### 12. Effects
 **Where:** Options → Gameplay → Effects (Classic or Enhanced) and Effects quality.
