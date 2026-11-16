@@ -5,8 +5,6 @@
 A fan remake of *Star Wars: Knights of the Old Republic II – The Sith Lords* in a modern engine.<br>
 It runs the original game's own levels, conversations and scripts, built on your computer from **your own copy** of the game.
 
-<img width="100%" alt="KOTOR 2 Remake" src="https://github.com/user-attachments/assets/a8e9cbd1-f9b6-405e-a0d7-b4107dbfbdad" />
-
 </div>
 
 > [!WARNING]
@@ -128,21 +126,6 @@ adding the game to Steam for Game Mode).
 replaces the game, in about a minute; your game data, mods, saves and settings stay as they are.
 
 Why these mods, and what each one does: [COMMUNITY_MODS.md](COMMUNITY_MODS.md).
-
-<table>
-  <tr>
-    <td width="50%"><img width="100%" alt="image" src="https://github.com/user-attachments/assets/526a6708-7255-41e1-97d8-43715a2c14bc" /></td>
-    <td width="50%"><img width="100%" alt="image" src="https://github.com/user-attachments/assets/c5de1805-398f-4925-8256-a45906224cf8" /></td>
-  </tr>
-  <tr>
-    <td width="50%"><img width="100%" alt="image" src="https://github.com/user-attachments/assets/25f2b1c3-5a4b-42fc-a619-1a8767d6cc9e" /></td>
-    <td width="50%"><img width="100%" alt="image" src="https://github.com/user-attachments/assets/c954e3b6-792a-4b85-966c-afb47ecb56c4" /></td>
-  </tr>
-  <tr>
-    <td width="50%"><img width="100%" alt="image" src="https://github.com/user-attachments/assets/52cd041b-c47b-4db2-a937-5b24f0264785" /></td>
-    <td width="50%"><img width="100%" alt="image" src="https://github.com/user-attachments/assets/8020374c-4b16-46b8-9152-183ad9f682d1" /></td>
-  </tr>
-</table>
 
 ---
 
