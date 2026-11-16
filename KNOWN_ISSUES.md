@@ -1,7 +1,7 @@
 # Known issues
 
 Things I already know about in the demo, so you don't need to report them (but if you find out more, add it to the
-issue linked here, or open one). Last updated for **0.8.0** (early access).
+issue linked here, or open one). Last updated for **0.8.1** (early access).
 
 ## Installing
 
@@ -11,7 +11,9 @@ issue linked here, or open one). Last updated for **0.8.0** (early access).
   stops, **Try again** carries on where it left off.
 - **Windows and Steam Deck / Linux are experimental.** Both are new in 0.8.0 and haven't been run on real hardware yet.
   Setup may not find the game on every machine (choose its folder by hand), and the first build may fail somewhere the
-  Mac's doesn't. Reports with Setup's **Show details** log are the most useful thing you can send.
+  Mac's doesn't. Reports with Setup's **Show details** log (or **Copy report**) are the most useful thing you can send.
+- **Setup 0.8.0 could freeze at the start of the build** with an empty details log (seen on Windows). Fixed in 0.8.1:
+  press **Cancel** and run the new Setup.
 - **Windows asks before running Setup** ("Windows protected your PC"): it isn't signed yet. **More info → Run anyway**.
 - **On a Steam Deck, Setup runs in Desktop Mode.** Once it's built, add the game to Steam and play it in Game Mode
   ([INSTALL_STEAM_DECK.md](INSTALL_STEAM_DECK.md)).
