@@ -51,9 +51,9 @@ a bot **walks** it (an automated playthrough). Then I **check** it by playing it
 |---|---|---|---|
 | Peragus (mining facility) | ✅ | ✅ | in progress |
 | The Harbinger | ✅ | ✅ | in progress |
-| Telos: Citadel Station | first area as a test (0.9.0) | ⬜ | ⬜ |
-| Telos: the surface and the academy | ⬜ | ⬜ | ⬜ |
-| The Ebon Hawk and the galaxy map | ⬜ | ⬜ | ⬜ |
+| Telos: Citadel Station | ✅ | ✅ (smoke bot) | ⬜ |
+| Telos: the surface and the academy | ✅ | ✅ (smoke bot; not the swoop race) | ⬜ |
+| The Ebon Hawk and the galaxy map | ✅ | ✅ | ⬜ |
 | Nar Shaddaa | ⬜ | ⬜ | ⬜ |
 | Dxun | ⬜ | ⬜ | ⬜ |
 | Onderon | ⬜ | ⬜ | ⬜ |
@@ -66,7 +66,9 @@ a bot **walks** it (an automated playthrough). Then I **check** it by playing it
 
 Peragus doesn't use any of these, so they'll show up along with the planets that need them.
 
-- [ ] Stores (buying and selling)
+- [x] Stores (buying and selling) and credits (0.9.5)
+- [x] The galaxy map (0.9.5)
+- [x] A smoke bot that tours every level and reports what's broken (0.9.5)
 - [ ] Influence and companion conversations
 - [ ] Training companions as Jedi
 - [x] The full party, and swapping members (the party selection screen, 0.9.0)
@@ -75,11 +77,11 @@ Peragus doesn't use any of these, so they'll show up along with the planets that
 - [ ] Lightsabers: building them, crystals, saber forms
 - [ ] Prestige classes
 - [ ] Light and dark side, and what they do to your powers and appearance
-- [ ] Pazaak, swoop racing and the turret minigames
+- [ ] Pazaak and swoop racing (the turret minigame is in)
 - [ ] The journal across planets
 - [ ] Enemy talents (special moves the original AI used)
-- [ ] Every original script function the game calls (the log lists any that are still missing; Citadel Station's
-      first area needs all but one)
+- [ ] Every original script function the game calls: every built level has all it calls, except swoop racing's
+      (tools/level_functions.py lists any that are missing)
 
 ## Installer
 

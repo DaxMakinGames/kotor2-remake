@@ -1,7 +1,7 @@
 # Known issues
 
 Things I already know about in the demo, so you don't need to report them (but if you find out more, add it to the
-issue linked here, or open one). Last updated for **0.9.0** (early access).
+issue linked here, or open one). Last updated for **0.9.5** (early access).
 
 ## Installing
 
@@ -14,6 +14,8 @@ issue linked here, or open one). Last updated for **0.9.0** (early access).
   Mac's doesn't. Reports with Setup's **Show details** log (or **Copy report**) are the most useful thing you can send.
 - **Setup 0.8.0 could freeze at the start of the build** with an empty details log (seen on Windows). Fixed in 0.8.1:
   press **Cancel** and run the new Setup.
+- **Setup 0.9.0 stopped at "the mods" (step 4 of 27)** with "File exists" in its log, when the KOTOR 2 Community Patch
+  (K2CP) was among the mods. Fixed in 0.9.5: run the new Setup.
 - **Windows asks before running Setup** ("Windows protected your PC"): it isn't signed yet. **More info → Run anyway**.
 - **On a Steam Deck, Setup runs in Desktop Mode.** It adds the game to Steam by itself; then play it in Game Mode
   ([INSTALL_STEAM_DECK.md](INSTALL_STEAM_DECK.md)).
@@ -33,6 +35,7 @@ issue linked here, or open one). Last updated for **0.9.0** (early access).
 - **Combat balance** (enemy numbers, XP) hasn't been tuned by hand yet.
 - **Some lighting and floors** may look too dark or patchy in places.
 - **The end of the demo** doesn't yet say what's next.
+- **Stores and the galaxy map are new** in 0.9.5. Peragus has no store, so they show up with Telos.
 - **The party selection screen and Companion Settings are new** in 0.9.0. Peragus never asks for the party screen
   itself; open it from the Party page (**Choose party...**) to try it.
 
