@@ -51,8 +51,8 @@ a bot **walks** it (an automated playthrough). Then I **check** it by playing it
 |---|---|---|---|
 | Peragus (mining facility) | ✅ | ✅ | in progress |
 | The Harbinger | ✅ | ✅ | in progress |
-| Telos: Citadel Station | ✅ | ✅ (smoke bot) | ⬜ |
-| Telos: the surface and the academy | ✅ | ✅ (smoke bot; not the swoop race) | ⬜ |
+| Telos: Citadel Station | ✅ | ✅ | ⬜ |
+| Telos: the surface and the academy | ✅ | ✅ (not the swoop race) | ⬜ |
 | The Ebon Hawk and the galaxy map | ✅ | ✅ | ⬜ |
 | Nar Shaddaa | ⬜ | ⬜ | ⬜ |
 | Dxun | ⬜ | ⬜ | ⬜ |
@@ -68,7 +68,6 @@ Peragus doesn't use any of these, so they'll show up along with the planets that
 
 - [x] Stores (buying and selling) and credits (0.9.5)
 - [x] The galaxy map (0.9.5)
-- [x] A smoke bot that tours every level and reports what's broken (0.9.5)
 - [ ] Influence and companion conversations
 - [ ] Training companions as Jedi
 - [x] The full party, and swapping members (the party selection screen, 0.9.0)
