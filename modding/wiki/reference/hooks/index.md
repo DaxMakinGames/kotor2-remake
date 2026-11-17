@@ -1,6 +1,6 @@
 # Hooks
 
-Every hook the game offers, 35 in all. **Modifiers** change a value before the game uses it: every mod that hooked one gets it in load order. **Events** tell every listening mod that something happened. See [Hooks explained](../../guides/hooks.md) for how to use them.
+Every hook the game offers, 37 in all. **Modifiers** change a value before the game uses it: every mod that hooked one gets it in load order. **Events** tell every listening mod that something happened. See [Hooks explained](../../guides/hooks.md) for how to use them.
 
 ## Game flow
 
@@ -32,6 +32,8 @@ Every hook the game offers, 35 in all. **Modifiers** change a value before the g
 | [shield_rate](shield_rate.md) | modifier | How fast the player's shield recharges, in points per second. |
 | [heal_amount](heal_amount.md) | modifier | How much a medpac or repair kit heals. |
 | [enemy_think](enemy_think.md) | modifier | Seconds between the enemies' decisions: who to fight, where to move, when to throw. |
+| [npc_scene](npc_scene.md) | modifier | The scene a creature in a level is made from: a mining droid, a droid, a person, or a mod's own kind. |
+| [npc_spawned](npc_spawned.md) | event | A creature has been placed in a level and its model built: anyone but the player and companions. |
 
 ## Character and progress
 

@@ -14,11 +14,12 @@ If you're not sure where it is, **Open mods folder** on the Mods screen creates 
 
 ## The Mods screen
 
-On the left, every mod found, with its icon and a switch to turn it on or off. Pick one to see, on the right, its name,
-author, version, description and pictures, and to:
+On the left, every mod found, with its icon and a switch to turn it on or off. The search box finds a mod by its name,
+author or description, and the filter next to it shows only the mods that are on, off, have settings, or have
+conflicts. Pick one to see, on the right, its pictures as a banner, its name, author, version and description, and to:
 
-- **Change its load order:** *Load earlier* and *Load later* move it. **Find best order** sorts every mod by what
-  their `mod.json` files ask (`load_after`, `load_before`). A mod's hooks run in this order.
+- **Change its load order:** drag it up or down the list, or use *Load earlier* and *Load later*. **Find best order**
+  sorts every mod by what their `mod.json` files ask (`load_after`, `load_before`). A mod's hooks run in this order.
 - **Change its settings:** these take effect immediately and are kept between games.
 
 ## Collections
@@ -27,11 +28,16 @@ A collection is a saved set of which mods are on, and their order: "Hardcore pla
 mods, press **Save as...** and give it a name. Pick a collection from the list at the top to switch to it (then
 **Restart to apply**). Deleting a collection keeps the mods themselves.
 
-Turning mods on or off and changing the order take effect when the game restarts. **Restart to apply** does that for
-you.
+Turning mods on or off and changing the order take effect at once. A mod that needs a restart says so, and
+**Restart** does that for you.
 
-Conflicts between mods appear at the bottom, such as two mods that say they can't run together, or two mods replacing
-the same file.
+A mod that clashes with another one that's on is marked in the list, and its **Conflicts** card says how:
+
+- **⚠ in red:** two mods say they can't run together, or both replace the same textures, models, sounds or
+  conversations. The one later in the load order wins.
+- **≈ in gold:** both change the same number through a hook. They stack, and the later one has the last word.
+
+Drag a mod to change which one loads later.
 
 ## New-game choices
 

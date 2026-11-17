@@ -58,8 +58,10 @@ it all comes to as you go. Each path has its own colour.
   </tr>
 </table>
 
-**Menus that explain themselves.** Your character, party, inventory, journal and map, laid out as cards. Point at any
-number to see how it's made up.
+**Menus that explain themselves.** Your character, party, inventory, journal and map, laid out as cards in the same
+look as Setup. Point at any number to see how it's made up. Choose who comes along on the party screen, and set how
+each companion fights (when to use a medpac, whether to close in or hang back, which Force powers to use) with one
+press of a preset.
 
 <p align="center">
   <img width="100%" alt="The Character page" src="screenshots/character_page.jpg" />
@@ -81,9 +83,13 @@ the game while you watch each level come together.
   </tr>
 </table>
 
+**Conversations as the original framed them.** Black bars ease in, what's said sits in the top bar and your numbered
+replies in the bottom one, and a log keeps every line in case one goes by too fast.
+
 Also in this demo: upscaling (MetalFX and FSR 2) for a sharper, smoother picture on a Mac, characters who turn to
-whoever's talking, rooms that echo by their size, controller support, and mods you can switch on and off without a
-restart.
+whoever's talking, Force powers that light up whoever they strengthen, loot that shows what it would change against
+what you're wearing, rooms that echo by their size, controller support, and mods you can search, drag into order and
+switch on and off without a restart, with a warning when two of them clash.
 
 <sub>Screenshots from the demo on a Mac, Effects set to Enhanced.</sub>
 
@@ -101,7 +107,7 @@ From [Releases](../../releases), get the Setup for your system:
 
 On every system you need your own copy of KOTOR 2 (Steam or GOG) and one free mod, TSLRCM. Setup builds the game from
 your copy on your computer, so the first install takes a while. **Windows and Steam Deck are experimental**: they're new
-and haven't been run on real hardware yet, so reports from them are especially welcome.
+and only a few players have tried them so far, so reports from them are especially welcome.
 
 ## Install on a Mac
 

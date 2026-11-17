@@ -154,6 +154,8 @@ What a mod has (`scripts/mods/kotor_mod.gd`):
 | `choice(key)` | That game's choice |
 | `save_data()` | A Dictionary that's saved and loaded with the game. Keep the mod's state here |
 | `add_item(resref, data)` | A new item beside the game's own, never replacing one. Outfits name a body and their own textures (see the wiki's Adding items and Outfits) |
+| `add_item(load(mod_path("items/x.tres")))` | The same, from an item made in Godot's Inspector: **New Resource → KotorItemDef**, saved in the mod's folder |
+| `add_items_in(folder)` | Every `KotorItemDef` (`.tres`) in a folder of the mod |
 | `give_item(resref, count)` | Puts an item in the party's inventory |
 | `mod_path(file)` | The path of a file of the mod's, for `load()` |
 | `write_log(text)` | A line in the game's log, marked with the mod's id |
@@ -162,6 +164,17 @@ What a mod has (`scripts/mods/kotor_mod.gd`):
 A mod also has the public parts of `Kotor`: names without a leading underscore, such as `Kotor.notice`,
 `Kotor.party`, `Kotor.stats`, `Kotor.add_item` and `Kotor.all_is_lost()`. Underscored names are internal and change
 without warning.
+
+**A creature's state** (health, down, dead, in a fight, faction) is its `KotorVitals`. Read it with `KotorCombat`'s
+helpers (`hit_points`, `max_hit_points`, `is_dead`, `is_down`, `is_engaged`, `fight_target`, `faction_of`). Change
+it with `KotorCombat.set_hit_points(who, hp)` and the like. To hear changes, connect to its signals:
+`KotorVitals.of(who).health_changed`, `down_changed`, `died`, `fight_changed` and `faction_changed`.
+`KotorVitals.fighting` lists everyone in a fight right now. The player's own health is `Kotor.player_hp`.
+
+**Kinds of creature** are scenes in `scenes/npc/`: `KotorDroid` (`droid.tscn`, and `mining_droid.tscn` built on it)
+and `KotorHumanoid` (`humanoid.tscn`). Each has its own settings in the Inspector: `sight_range`, `ability_chance`,
+`idle_chatter`, `never_throws` and `throws_grenades`, plus `plant_feet` for humanoids. To change a kind, use `npc_spawned`. To give
+creatures a scene of the mod's own, use `npc_scene`.
 
 A folder mod's `main.gd` is read as source, so it can't `preload` files beside it or use `class_name`. Load its other
 files with `load(mod_path("..."))` or put them in a `mod.pck`. A `.zip` mod's files are ordinary `res://mods/<id>/` paths.
@@ -259,7 +272,7 @@ original engine, not to rebuild it.
 | **Only the demo exists**: Peragus (101–107) and the Harbinger (151–153). No other planets, no new areas | Mods that hook rules and items work everywhere the game goes later |
 | **No new levels or areas.** A mod can't add a level or change a level's layout | Change what happens in a level through hooks and script functions |
 | **A replaced model can't move walls or floors**: the walkable layout comes from the game's walkmesh | Change how a room looks, not its shape underfoot |
-| **Hooks exist for 35 decisions** (the tables below). Stores and prices, party influence, alignment and minigames have none yet | Ask for a hook: each one is a small change in the game |
+| **Hooks exist for 37 decisions** (the tables below). Stores and prices, party influence, alignment and minigames have none yet | Ask for a hook: each one is a small change in the game |
 | **A folder mod's `main.gd` is read as source**: no `class_name`, no `preload` of files beside it | `load(mod_path("..."))`, or pack it into a `.zip` |
 | **Mac only for now**; a Windows build comes later | |
 | **The API is version 1 and may change** before 1.0 | Keep `api` in `mod.json` accurate; a mod for a newer API isn't loaded |
@@ -314,6 +327,8 @@ and an example. The tables below are written from the same descriptions, so they
 | `shield_rate` | modifier | `float` | How fast the player's shield recharges, in points per second. |
 | `heal_amount` | modifier | `int`, ctx `{item, who}` | How much a medpac or repair kit heals. |
 | `enemy_think` | modifier | `float` | Seconds between the enemies' decisions: who to fight, where to move, when to throw. |
+| `npc_scene` | modifier | `String`, ctx `{resref, appearance_id, body, instance}` | The scene a creature in a level is made from: a mining droid, a droid, a person, or a mod's own kind. |
+| `npc_spawned` | event | `npc: Node3D` | A creature has been placed in a level and its model built: anyone but the player and companions. |
 
 ### Character and progress
 

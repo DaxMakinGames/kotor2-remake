@@ -51,7 +51,7 @@ a bot **walks** it (an automated playthrough). Then I **check** it by playing it
 |---|---|---|---|
 | Peragus (mining facility) | ✅ | ✅ | in progress |
 | The Harbinger | ✅ | ✅ | in progress |
-| Telos: Citadel Station | ⬜ | ⬜ | ⬜ |
+| Telos: Citadel Station | first area as a test (0.9.0) | ⬜ | ⬜ |
 | Telos: the surface and the academy | ⬜ | ⬜ | ⬜ |
 | The Ebon Hawk and the galaxy map | ⬜ | ⬜ | ⬜ |
 | Nar Shaddaa | ⬜ | ⬜ | ⬜ |
@@ -69,14 +69,17 @@ Peragus doesn't use any of these, so they'll show up along with the planets that
 - [ ] Stores (buying and selling)
 - [ ] Influence and companion conversations
 - [ ] Training companions as Jedi
-- [ ] The full party, and swapping members
+- [x] The full party, and swapping members (the party selection screen, 0.9.0)
+- [x] Companion settings: orders, when to heal, how to fight, which powers (0.9.0)
+- [x] Levels as data: a new level needs no game code, only building (0.9.0)
 - [ ] Lightsabers: building them, crystals, saber forms
 - [ ] Prestige classes
 - [ ] Light and dark side, and what they do to your powers and appearance
 - [ ] Pazaak, swoop racing and the turret minigames
 - [ ] The journal across planets
 - [ ] Enemy talents (special moves the original AI used)
-- [ ] Every original script function the game calls (the log lists any that are still missing)
+- [ ] Every original script function the game calls (the log lists any that are still missing; Citadel Station's
+      first area needs all but one)
 
 ## Installer
 
