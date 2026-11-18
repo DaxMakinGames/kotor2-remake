@@ -56,7 +56,7 @@ author and would like your mod left out, open an issue and it will be removed.
 
 ## How each mod is used
 
-The technical detail. `step00b_holograms.py` and `step00_overlay.py` in the pipeline lay the mods over the game
+The technical detail. `step01_holograms.py` and `step05_game_overlay.py` in the pipeline lay the mods over the game
 data in `out/_game`; nothing in Downloads or the game's install is changed.
 
 | Mod | What's in it | What we did |
@@ -65,8 +65,8 @@ data in `out/_game`; nothing in Downloads or the game's install is changed.
 | Peragus Admin Room Model Fixes | Models for `101peri`, `104pera`, `104perf` | Used, except that meshes the game doesn't draw get no material (see below). No scripts. |
 | Fixed Holograms and Admiralty Redux | 32 models, 8 textures, table and character edits | Models, textures and table rows used. Characters get the mod's appearance. The mod's mesh reordering isn't needed: see below. No scripts. |
 | Relighting 101PERt 2.1 | Model, walkmesh and 11 light bakes | Used as they are. No scripts. |
-| Planets HD 3.7 | 1,720 upscaled textures (TPC) for every planet, the Ebon Hawk, and screens and panels | Every texture the project has is replaced with the pack's version: 155 for Peragus and the Harbinger. Lightmaps, characters and the 25 textures the pack doesn't cover (skies, stars, a few small ones) stay as they were. Checked against the originals: same orientation, format and TXI settings in all 155. Laid under the fixes above, so they win where a name is shared. `step59_hd_textures.py` puts them in; Godot imports them VRAM-compressed. | **Installed as a mod:** Setup makes it into `planets_hd.zip` (`step62_hd_mods.py`) in the game's `mods` folder, so it can be switched off; the game data keeps the standard textures.
-| Vanilla Characters HD 3.1 | 863 upscaled character textures (TPC): bodies, heads, robes, droids | Every character texture the project has is replaced: 262 of 268, plus 8 that props use (corpses, Kreia on the slab). The hologram mod's textures win where they share a name (Dodonna's head), and its other five aren't in the pack. Same checks as the planets pack: orientation matches in all 263. The female player body loses alpha it never used, and gains an Xbox-only setting. Same steps as above. | **Installed as a mod:** Setup makes it into `characters_hd.zip` (`step62_hd_mods.py`) in the game's `mods` folder, so it can be switched off; the game data keeps the standard textures.
+| Planets HD 3.7 | 1,720 upscaled textures (TPC) for every planet, the Ebon Hawk, and screens and panels | Every texture the project has is replaced with the pack's version: 155 for Peragus and the Harbinger. Lightmaps, characters and the 25 textures the pack doesn't cover (skies, stars, a few small ones) stay as they were. Checked against the originals: same orientation, format and TXI settings in all 155. Laid under the fixes above, so they win where a name is shared. `step28_hd_textures.py` puts them in; Godot imports them VRAM-compressed. | **Installed as a mod:** Setup makes it into `planets_hd.zip` (`step43_hd_mods.py`) in the game's `mods` folder, so it can be switched off; the game data keeps the standard textures.
+| Vanilla Characters HD 3.1 | 863 upscaled character textures (TPC): bodies, heads, robes, droids | Every character texture the project has is replaced: 262 of 268, plus 8 that props use (corpses, Kreia on the slab). The hologram mod's textures win where they share a name (Dodonna's head), and its other five aren't in the pack. Same checks as the planets pack: orientation matches in all 263. The female player body loses alpha it never used, and gains an Xbox-only setting. Same steps as above. | **Installed as a mod:** Setup makes it into `characters_hd.zip` (`step43_hd_mods.py`) in the game's `mods` folder, so it can be switched off; the game data keeps the standard textures.
 
 ## The three scripts that differ in 1.8.6
 
@@ -80,10 +80,10 @@ data in `out/_game`; nothing in Downloads or the game's install is changed.
 
 ## What the room fixes really change
 
-Compared with the base game, node by node: new mesh `beam` and 8 fewer faces on `cr_tr02` in `104pera`, new texture coordinates on 9 other meshes of `104pera`, 2 of `101peri` and all 6 of `104perf`, and walkmeshes `walk43` and `walkmesh1`. All other meshes and every texture are untouched. Those walkmeshes name a `dirt` texture that doesn't exist, so `build_module.py` now leaves any mesh the game doesn't draw without a material. Otherwise it's drawn over the floor and no longer used for walking.
+Compared with the base game, node by node: new mesh `beam` and 8 fewer faces on `cr_tr02` in `104pera`, new texture coordinates on 9 other meshes of `104pera`, 2 of `101peri` and all 6 of `104perf`, and walkmeshes `walk43` and `walkmesh1`. All other meshes and every texture are untouched. Those walkmeshes name a `dirt` texture that doesn't exist, so `step08_room_models.py` now leaves any mesh the game doesn't draw without a material. Otherwise it's drawn over the floor and no longer used for walking.
 
 ## Changes beyond what the mods do
 
 - **Holograms:** the game marks them with a `Hologram` field on the character. They now use a shader with a depth prepass (`KotorVfx.make_hologram`), so eyes and teeth don't show through heads. The mod could only reduce that by reordering meshes.
 - **Script functions:** `GivePlotXP`, `GetLastHostileActor`, `GetLastDamager`, `GetFirstObjectInArea` and `GetNextObjectInArea` now work. `SetSoloMode`, `SetFakeCombatState` and `ChangeObjectAppearance` are deliberate no-ops.
-- **Not implemented:** talent functions such as `GetCreatureTalentRandom`, which only `k_ai_master` calls. The native AI replaces that script, so enemies don't use talents yet.
+- **Not implemented:** talent functions such as `GetCreatureTalentRandom`, which only `k_ai_master` calls. The remake's own enemy behaviour replaces that script; enemies use their combat feats (0.9.6) but not every talent yet.

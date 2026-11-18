@@ -45,7 +45,7 @@ Here's what's done, what I'm working on, and what's left before a 1.0. Checked b
 ## Planets
 
 Every planet goes through the same three steps. First I **build** it (the pipeline converts it from your copy). Then
-a bot **walks** it (an automated playthrough). Then I **check** it by playing it myself.
+it's **walked** (every area toured: rooms, doors, containers, conversations and scripts). Then I **check** it by playing it myself.
 
 | Planet | Build | Walk | Check |
 |---|---|---|---|
@@ -68,6 +68,7 @@ Peragus doesn't use any of these, so they'll show up along with the planets that
 
 - [x] Stores (buying and selling) and credits (0.9.5)
 - [x] The galaxy map (0.9.5)
+- [x] Every level toured area by area, with a report of what's broken (0.9.5)
 - [ ] Influence and companion conversations
 - [ ] Training companions as Jedi
 - [x] The full party, and swapping members (the party selection screen, 0.9.0)
@@ -78,7 +79,7 @@ Peragus doesn't use any of these, so they'll show up along with the planets that
 - [ ] Light and dark side, and what they do to your powers and appearance
 - [ ] Pazaak and swoop racing (the turret minigame is in)
 - [ ] The journal across planets
-- [ ] Enemy talents (special moves the original AI used)
+- [x] Enemies' combat feats (Power Attack, Flurry, Critical Strike...) and critical hits (0.9.6)
 - [ ] Every original script function the game calls: every built level has all it calls, except swoop racing's
       (tools/level_functions.py lists any that are missing)
 

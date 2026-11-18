@@ -58,14 +58,45 @@ it all comes to as you go. Each path has its own colour.
   </tr>
 </table>
 
-**Menus that explain themselves.** Your character, party, inventory, journal and map, laid out as cards in the same
-look as Setup. Point at any number to see how it's made up. Choose who comes along on the party screen, and set how
-each companion fights (when to use a medpac, whether to close in or hang back, which Force powers to use) with one
-press of a preset.
+**Conversations as the original framed them.** The cinematic bars come in, what's said sits in the top bar and your
+numbered replies in the bottom one, and every voiced line moves the speaker's lips in time. A log keeps every line in
+case one goes by too fast.
 
 <p align="center">
-  <img width="100%" alt="The Character page" src="screenshots/character_page.jpg" />
+  <img width="100%" alt="Kreia in conversation, her line above and the replies below" src="screenshots/conversation.jpg" />
 </p>
+
+**Menus that explain themselves.** Your character, party, inventory, journal and map, laid out as cards. Point at any
+number to see how it's made up. Choose who comes along, and set how each companion fights (when to use a medpac,
+whether to close in or hang back, which Force powers to use) with one press of a preset.
+
+<table>
+  <tr>
+    <td width="50%"><img width="100%" alt="The Character page" src="screenshots/character_page.jpg" /></td>
+    <td width="50%"><img width="100%" alt="Choosing the party" src="screenshots/party_select.jpg" /></td>
+  </tr>
+  <tr>
+    <td align="center"><sub>Every number, and where it comes from</sub></td>
+    <td align="center"><sub>Choose who comes along</sub></td>
+  </tr>
+</table>
+
+**Loot, stores and the galaxy beyond Peragus.** A container shows what's inside and what it's worth; a store, its
+prices at that merchant's own markup. The Ebon Hawk's galaxy map keeps the original's starfield and planets, with
+what's open to you and what isn't. Stores and the galaxy map are ready for Telos and the planets after it.
+
+<table>
+  <tr>
+    <td width="33%"><img width="100%" alt="Looting a footlocker" src="screenshots/loot.jpg" /></td>
+    <td width="33%"><img width="100%" alt="A store on Citadel Station" src="screenshots/store.jpg" /></td>
+    <td width="33%"><img width="100%" alt="The Ebon Hawk's galaxy map" src="screenshots/galaxy_map.jpg" /></td>
+  </tr>
+  <tr>
+    <td align="center"><sub>What's inside, and what it's worth</sub></td>
+    <td align="center"><sub>Buying and selling</sub></td>
+    <td align="center"><sub>Where to next</sub></td>
+  </tr>
+</table>
 
 **Setup does the work.** It finds KOTOR 2 in Steam or GOG, tells you about the one free download it needs, and builds
 the game while you watch each level come together.
@@ -83,13 +114,10 @@ the game while you watch each level come together.
   </tr>
 </table>
 
-**Conversations as the original framed them.** Black bars ease in, what's said sits in the top bar and your numbered
-replies in the bottom one, and a log keeps every line in case one goes by too fast.
-
-Also in this demo: upscaling (MetalFX and FSR 2) for a sharper, smoother picture on a Mac, characters who turn to
-whoever's talking, Force powers that light up whoever they strengthen, loot that shows what it would change against
-what you're wearing, rooms that echo by their size, controller support, and mods you can search, drag into order and
-switch on and off without a restart, with a warning when two of them clash.
+Also in this demo: the original's combat rules down to critical hits and combat feats (Power Attack, Flurry, Critical
+Strike), metal and glass that shine as they did, upscaling (MetalFX and FSR 2) for a sharper picture on a Mac,
+characters who turn to whoever's talking and fidget while they wait, rooms that echo by their size, controller support,
+and mods you can search, drag into order and switch on and off without a restart, with a warning when two of them clash.
 
 <sub>Screenshots from the demo on a Mac, Effects set to Enhanced.</sub>
 

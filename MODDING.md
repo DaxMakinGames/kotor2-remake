@@ -234,7 +234,7 @@ texture, the one later in the load order wins (use `load_after`). Turn the mod o
 - A texture's TXI settings (transparency, animation) come from the game's original.
 
 **Vanilla Planets HD and Vanilla Characters HD** are made into two such mods on the player's computer, from their own
-downloads (`step62_hd_mods.py`, then `install.py` packs them into `planets_hd.zip` and `characters_hd.zip`). Only
+downloads (`step43_hd_mods.py`, then `install.py` packs them into `planets_hd.zip` and `characters_hd.zip`). Only
 textures the game uses go in, and none that the Peragus fix mods supply. The base game keeps the standard textures.
 On the development machine the packs are still built into the project (`hd_in_base` in `pipeline_paths.py`).
 
