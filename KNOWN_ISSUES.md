@@ -34,7 +34,9 @@ issue linked here, or open one). Last updated for **0.9.6** (early access).
 - **Voices on the later Peragus levels** haven't all been checked. Missing or wrong lines are worth reporting.
 - **Combat balance** (enemy numbers, XP) hasn't been tuned by hand yet.
 - **Some lighting and floors** may look too dark or patchy in places.
-- **The end of the demo** doesn't yet say what's next.
+- **The Ebon Hawk and Telos are new** in 0.9.6 and haven't been played through end to end yet. Expect rougher edges
+  there than on Peragus, and please report what you find.
+- **Swoop racing on Telos isn't in yet**, and the planets after Telos aren't open yet: the game says so if you set course for one.
 - **Stores and the galaxy map are new** in 0.9.5. Peragus has no store, so they show up with Telos.
 - **The party selection screen and Companion Settings are new** in 0.9.0. Peragus never asks for the party screen
   itself; open it from the Party page (**Choose party...**) to try it.
