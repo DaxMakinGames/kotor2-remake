@@ -40,8 +40,9 @@ too (Steam closes for a moment while it's added, if it was open).
 
 ## Updating
 
-Download the new Setup and run it. If your game data is still current, it says **Update** and takes about a minute;
-your saves, settings and mods are kept.
+Download the new Setup and run it: it says **Update**, with what's new. When the new version only changes the game, that
+takes about a minute. When it adds levels (0.9.6 adds the Ebon Hawk and Telos), it builds only those, so it needs your
+copy of KOTOR 2 and TSLRCM again and about 15 GB free. The levels you have, your saves, settings and mods are kept.
 
 ## If something goes wrong
 

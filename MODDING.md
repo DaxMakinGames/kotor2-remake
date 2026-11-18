@@ -1,7 +1,7 @@
 # Modding guide
 
 > [!WARNING]
-> **This is an early demo, and it covers only the first level.** Only Peragus and the Harbinger are rebuilt. Things
+> **This is early access.** Peragus, the Harbinger, the Ebon Hawk and Telos are rebuilt. Things
 > are expected to be broken: missing features, bugs, rough edges. I can't fix, port or implement everything. The goal
 > is an **engine recreation** of KOTOR 2: the original game's levels, scripts and rules running as they did, without
 > modernizing its systems more than needed. Mod support follows the same idea: it gives you hooks into the original

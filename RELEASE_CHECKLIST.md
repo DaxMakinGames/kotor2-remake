@@ -2,7 +2,7 @@
 
 Here's what's done, what I'm working on, and what's left before a 1.0. Checked boxes are done and tested.
 
-> **Where things are right now:** it's an early demo, first level only: Peragus and the Harbinger, start to finish.
+> **Where things are right now:** early access: Peragus and the Harbinger start to finish, and the Ebon Hawk and Telos (0.9.6), not yet played through.
 > There will be bugs. What I'm going for is an engine recreation of KOTOR 2, meaning the original levels, scripts and
 > rules running the way they did, with a few modern touches (graphics settings, optional HD textures, an installer
 > that does the work for you). I'm one person, so I won't be able to fix, port or add everything.
@@ -68,7 +68,6 @@ Peragus doesn't use any of these, so they'll show up along with the planets that
 
 - [x] Stores (buying and selling) and credits (0.9.5)
 - [x] The galaxy map (0.9.5)
-- [x] Every level toured area by area, with a report of what's broken (0.9.5)
 - [ ] Influence and companion conversations
 - [ ] Training companions as Jedi
 - [x] The full party, and swapping members (the party selection screen, 0.9.0)

@@ -8,7 +8,8 @@ It runs the original game's own levels, conversations and scripts, built on your
 </div>
 
 > [!WARNING]
-> **Early access: the first level only.** Peragus and the Harbinger, start to finish, on Mac, Windows and Steam Deck.
+> **Early access.** Peragus and the Harbinger start to finish, and new in 0.9.6, the Ebon Hawk and Telos, on Mac,
+> Windows and Steam Deck. Telos hasn't been played through end to end yet, and swoop racing isn't in.
 > Things are expected to be broken.
 > It's an engine recreation: the original game as it was, with only light modernization. See the
 > [roadmap](RELEASE_CHECKLIST.md) for what's done and what's next.
@@ -81,9 +82,10 @@ whether to close in or hang back, which Force powers to use) with one press of a
   </tr>
 </table>
 
-**Loot, stores and the galaxy beyond Peragus.** A container shows what's inside and what it's worth; a store, its
-prices at that merchant's own markup. The Ebon Hawk's galaxy map keeps the original's starfield and planets, with
-what's open to you and what isn't. Stores and the galaxy map are ready for Telos and the planets after it.
+**On to the Ebon Hawk and Telos.** After the Harbinger the story carries on: the Ebon Hawk, then Citadel Station and
+Telos's surface, by daylight under its own sky. A container shows what's inside and what it's worth; a store, its prices
+at that merchant's own markup. The Ebon Hawk's galaxy map keeps the original's starfield and planets, with what's open to
+you and what isn't.
 
 <table>
   <tr>
@@ -99,7 +101,8 @@ what's open to you and what isn't. Stores and the galaxy map are ready for Telos
 </table>
 
 **Setup does the work.** It finds KOTOR 2 in Steam or GOG, tells you about the one free download it needs, and builds
-the game while you watch each level come together.
+the game while you watch each level come together. You can pause a build and carry on later, and when a new version
+adds levels, Update builds only those.
 
 <table>
   <tr>
@@ -114,12 +117,13 @@ the game while you watch each level come together.
   </tr>
 </table>
 
-Also in this demo: the original's combat rules down to critical hits and combat feats (Power Attack, Flurry, Critical
-Strike), metal and glass that shine as they did, upscaling (MetalFX and FSR 2) for a sharper picture on a Mac,
-characters who turn to whoever's talking and fidget while they wait, rooms that echo by their size, controller support,
-and mods you can search, drag into order and switch on and off without a restart, with a warning when two of them clash.
+Also: the original's combat rules down to critical hits and combat feats (Power Attack, Flurry, Critical Strike),
+knockdowns you get up from, weapons drawn as a fight starts, metal and glass that shine as they did, skies, screens and
+lights that glow, upscaling (MetalFX and FSR 2) for a sharper picture on a Mac, characters who turn to whoever's talking,
+listen and fidget while they wait, rooms that echo by their size, controller support, and mods you can search, drag into
+order and switch on and off without a restart, with a warning when two of them clash.
 
-<sub>Screenshots from the demo on a Mac, Effects set to Enhanced.</sub>
+<sub>Screenshots on a Mac, Effects set to Enhanced.</sub>
 
 ---
 
@@ -133,8 +137,9 @@ From [Releases](../../releases), get the Setup for your system:
 | **Windows** 10 or 11, 64-bit *(experimental)* | `KOTOR2-Remake-Setup-Windows.zip` | [INSTALL_WINDOWS.md](INSTALL_WINDOWS.md) |
 | **Steam Deck** and Linux *(experimental)* | `KOTOR2-Remake-Setup-Linux.tar.gz` | [INSTALL_STEAM_DECK.md](INSTALL_STEAM_DECK.md) |
 
-On every system you need your own copy of KOTOR 2 (Steam or GOG) and one free mod, TSLRCM. Setup builds the game from
-your copy on your computer, so the first install takes a while. **Windows and Steam Deck are experimental**: they're new
+On every system you need your own copy of KOTOR 2 (Steam or GOG), one free mod, TSLRCM, and about 25 GB free while it
+builds (about 5 GB once it's done). Setup builds the game from your copy on your computer, so the first install takes a
+while. **Windows and Steam Deck are experimental**: they're new
 and only a few players have tried them so far, so reports from them are especially welcome.
 
 ## Install on a Mac
@@ -148,16 +153,18 @@ and only a few players have tried them so far, so reports from them are especial
    to KOTOR 2 Remake Setup, then confirm. Setup walks you through a few short pages (your game, mods, then
    **Ready**, which checks everything at once, then **Install**). If something's missing, it says what and updates by
    itself once you've downloaded it.
-4. **Wait.** The first build takes an hour or more, and Setup shows how long is left. If it stops, it says what to do,
-   and **Try again** carries on where it stopped. When it's done, Setup removes everything it used to build the game.
-   Then press **Play**.
+4. **Wait.** The first build takes a couple of hours, and Setup shows how long is left. **Pause** stops it for now; it
+   carries on where it was, even after closing Setup. If it stops on its own, it says what to do, and **Try again**
+   carries on where it stopped. When it's done, Setup removes everything it used to build the game. Then press **Play**.
 
 On Windows or a Steam Deck, follow [INSTALL_WINDOWS.md](INSTALL_WINDOWS.md) or
 [INSTALL_STEAM_DECK.md](INSTALL_STEAM_DECK.md): the same Setup, with the steps for that system (on the Deck, including
 adding the game to Steam for Game Mode).
 
-**Updating:** download the new Setup and run it. If your game data is still current, it says **Update** and only
-replaces the game, in about a minute; your game data, mods, saves and settings stay as they are.
+**Updating:** download the new Setup and run it, and it says **Update**, with what's new. When the new version only
+changes the game, that takes about a minute. When it adds levels (0.9.6 adds the Ebon Hawk and Telos), it builds only
+those, so it needs your copy of KOTOR 2 and TSLRCM again and about 15 GB free. Either way, the levels you have, your
+mods, saves and settings stay as they are.
 
 Why these mods, and what each one does: [COMMUNITY_MODS.md](COMMUNITY_MODS.md).
 
