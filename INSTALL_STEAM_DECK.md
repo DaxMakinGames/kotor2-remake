@@ -8,7 +8,7 @@
 Setup runs once in **Desktop Mode** to build the game from your copy of KOTOR 2. After that you play it from **Game
 Mode** like any other game in your library, with the Deck's controls.
 
-**You need:** KOTOR 2 installed through Steam on the Deck (the native version Steam installs by default), about 10 GB
+**You need:** KOTOR 2 installed through Steam on the Deck (the native version Steam installs by default), about 25 GB
 of free space while it builds, and Wi-Fi the first time (Setup downloads Blender from blender.org).
 
 ## 1. Switch to Desktop Mode

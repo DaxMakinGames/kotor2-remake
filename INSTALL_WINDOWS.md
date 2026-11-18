@@ -5,7 +5,7 @@
 > please [report it](https://github.com/DaxMakinGames/kotor2-remake/issues): Setup's **Show details** log and what
 > happened help the most.
 
-**You need:** Windows 10 or 11 (64-bit), KOTOR 2 from Steam or GOG, about 10 GB of free space while it builds, and an
+**You need:** Windows 10 or 11 (64-bit), KOTOR 2 from Steam or GOG, about 25 GB of free space while it builds, and an
 internet connection the first time (Setup downloads Blender from blender.org if you don't have it).
 
 ## 1. Get the two downloads
