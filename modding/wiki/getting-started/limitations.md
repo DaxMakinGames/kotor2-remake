@@ -16,11 +16,13 @@
 | **Models can't be replaced**, by name or by path. Only textures can | New items wear the game's own bodies with their own textures ([Outfits](../guides/outfits.md)) |
 | **Voices, music and sounds can't be replaced** | Play your own sounds from your mod's script |
 | **Conversations can't be added or edited** directly | [Wrap a script function](../guides/script-functions.md), or change the globals a conversation checks |
-| **Hooks exist for 30 decisions.** Stores and prices, party influence, alignment and minigames have none yet | Ask for the hook you need: each one is a small change in the game |
+| **Hooks exist for 50 decisions and events**, stores, influence, alignment, forms and minigames among them | Ask for the hook you need: each one is a small change in the game |
 | **A folder mod's `main.gd` is read as source:** no `class_name`, no `preload` of files beside it | `load(mod_path("..."))`, or pack the mod into a `.zip` |
 | **Turning mods on or off needs a restart** | Settings and new-game choices change at once |
 | **Mac only for now.** A Windows build comes later | |
-| **The API is version 1 and may change** before 1.0 | Keep `api` in `mod.json` accurate: a mod for a newer API isn't loaded |
+| **Pazaak and swoop racing aren't in yet**, so `minigame_started` only says `"turret"` | Listen for any kind: the others will use the same events |
+
+The API itself is **locked for 1.0** (version 1): hooks, their arguments and context keys, `KotorMod`'s methods and `mod.json`'s fields can be added to but never removed or changed. Every release is checked against the lock (`modding_wiki/api_lock.py`).
 
 ## Known rough edges in the game itself
 

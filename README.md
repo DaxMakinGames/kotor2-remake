@@ -8,8 +8,9 @@ It runs the original game's own levels, conversations and scripts, built on your
 </div>
 
 > [!WARNING]
-> **Early access.** Peragus and the Harbinger start to finish, and new in 0.9.6, the Ebon Hawk and Telos, on Mac,
-> Windows and Steam Deck. Telos hasn't been played through end to end yet, and swoop racing isn't in.
+> **Early access.** Peragus and the Harbinger start to finish, the Ebon Hawk and Telos, on Mac, Windows and Steam
+> Deck. New in 0.9.8: influence, the light and dark side, lightsaber crystals and forms, and the journal across
+> planets. Telos hasn't been played through end to end yet, and swoop racing isn't in.
 > Things are expected to be broken.
 > It's an engine recreation: the original game as it was, with only light modernization. See the
 > [roadmap](RELEASE_CHECKLIST.md) for what's done and what's next.
@@ -164,7 +165,9 @@ adding the game to Steam for Game Mode).
 **Updating:** download the new Setup and run it, and it says **Update**, with what's new. When the new version only
 changes the game, that takes about a minute. When it adds levels (0.9.6 adds the Ebon Hawk and Telos), it builds only
 those, so it needs your copy of KOTOR 2 and TSLRCM again and about 15 GB free. Either way, the levels you have, your
-mods, saves and settings stay as they are.
+mods, saves and settings stay as they are. 0.9.8 builds the game data again (it has new parts: every lightsaber colour, the dark
+side's faces, the droids' animations), so like a first install it needs your copy of KOTOR 2, TSLRCM and the full
+build's disk space; your saves, settings and mods are kept.
 
 Why these mods, and what each one does: [COMMUNITY_MODS.md](COMMUNITY_MODS.md).
 

@@ -1,6 +1,6 @@
 # Hooks
 
-Every hook the game offers, 37 in all. **Modifiers** change a value before the game uses it: every mod that hooked one gets it in load order. **Events** tell every listening mod that something happened. See [Hooks explained](../../guides/hooks.md) for how to use them.
+Every hook the game offers, 50 in all. **Modifiers** change a value before the game uses it: every mod that hooked one gets it in load order. **Events** tell every listening mod that something happened. See [Hooks explained](../../guides/hooks.md) for how to use them.
 
 ## Game flow
 
@@ -58,3 +58,31 @@ Every hook the game offers, 37 in all. **Modifiers** change a value before the g
 | [door_opened](door_opened.md) | event | A door has opened, by anyone or any script. |
 | [container_opened](container_opened.md) | event | The player has opened a container: a footlocker, a corpse, a crate. |
 | [script_run](script_run.md) | event | One of the original game's scripts is about to run. |
+| [journal_updated](journal_updated.md) | event | A quest's entry in the journal changed (a script's AddJournalQuestEntry moved it to another state). |
+
+## Companions and alignment
+
+| Hook | Kind | What it's for |
+|---|---|---|
+| [influence_change](influence_change.md) | modifier | How much a companion's influence moves when a conversation or script changes it (ModifyInfluence). |
+| [influence_changed](influence_changed.md) | event | A companion's influence moved, after it was kept within 0 to 100. The game also says "Influence gained" or "lost" on screen. |
+| [alignment_change](alignment_change.md) | modifier | How far an alignment shifts: the player's, or a companion's (their own, or following the player's when influence pulls them). |
+| [alignment_changed](alignment_changed.md) | event | An alignment shifted. |
+| [dark_stage](dark_stage.md) | modifier | How deep the dark side's marks show on the player's face: 0 for none, 1 to 4 for the four textures heads.2da gives each head (evil, very evil and so on). |
+
+## Stores and minigames
+
+| Hook | Kind | What it's for |
+|---|---|---|
+| [store_price](store_price.md) | modifier | What an item costs to buy at a store, or what the store pays for it. |
+| [store_bought](store_bought.md) | event | The player bought an item. |
+| [store_sold](store_sold.md) | event | The player sold an item. |
+| [minigame_started](minigame_started.md) | event | A minigame has begun. So far that's the Ebon Hawk's turret on Peragus; pazaak and swoop racing will say so too once they're in. |
+| [minigame_finished](minigame_finished.md) | event | A minigame has ended. |
+
+## Lightsabers and forms
+
+| Hook | Kind | What it's for |
+|---|---|---|
+| [form_bonus](form_bonus.md) | modifier | One of a form's numbers, as it applies right now: a lightsaber form (Shii-Cho to Juyo) or a Force form (Force Channel to Force Mastery). |
+| [form_changed](form_changed.md) | event | Someone took up a form, or let one go. |

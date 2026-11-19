@@ -5,7 +5,7 @@
 > Only Peragus and the Harbinger are rebuilt, and things are **expected to be broken**: missing features, bugs, rough
 > edges. Not everything can be fixed, ported or implemented. The project is an **engine recreation** of KOTOR 2: the
 > original game's levels, scripts and rules running as they did, without modernizing its systems more than needed.
-> Mod support follows the same idea, and its API may change before 1.0. See [Current limitations](getting-started/limitations.md).
+> Mod support follows the same idea. Its API is locked for 1.0: new hooks can be added, but nothing a mod relies on is removed or changed. See [Current limitations](getting-started/limitations.md).
 
 Mods for the KOTOR 2 remake can change how the game plays, not just how it looks. A mod can make fights harder or
 easier, add game modes like Ironman, add new items and outfits, change the original game's scripts, and keep its own

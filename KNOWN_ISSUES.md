@@ -1,7 +1,7 @@
 # Known issues
 
 Things I already know about in the demo, so you don't need to report them (but if you find out more, add it to the
-issue linked here, or open one). Last updated for **0.9.6** (early access).
+issue linked here, or open one). Last updated for **0.9.8** (early access).
 
 ## Installing
 
@@ -36,6 +36,9 @@ issue linked here, or open one). Last updated for **0.9.6** (early access).
 - **Some lighting and floors** may look too dark or patchy in places.
 - **The Ebon Hawk and Telos are new** in 0.9.6 and haven't been played through end to end yet. Expect rougher edges
   there than on Peragus, and please report what you find.
+- **Influence, the light and dark side, crystals and forms are new** in 0.9.8. Companions' conversations that
+  depend on influence mostly come after Telos, so there's less to see of it yet; reports of a companion reacting
+  wrongly are welcome.
 - **Swoop racing on Telos isn't in yet**, and the planets after Telos aren't open yet: the game says so if you set course for one.
 - **Stores and the galaxy map are new** in 0.9.5. Peragus has no store, so they show up with Telos.
 - **The party selection screen and Companion Settings are new** in 0.9.0. Peragus never asks for the party screen

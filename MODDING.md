@@ -5,7 +5,7 @@
 > are expected to be broken: missing features, bugs, rough edges. I can't fix, port or implement everything. The goal
 > is an **engine recreation** of KOTOR 2: the original game's levels, scripts and rules running as they did, without
 > modernizing its systems more than needed. Mod support follows the same idea: it gives you hooks into the original
-> rules rather than a new game. Expect the modding API to change before 1.0.
+> rules rather than a new game. The modding API is locked: what's there stays (see "The API's promise" below).
 
 The full guide, with a page for every hook, recipes and step-by-step tutorials, is the **modding wiki**: `modding/wiki/`
 in the download repository (`modding_wiki/docs/` in the game's project). This file is the short version. Good places to
@@ -269,13 +269,28 @@ original engine, not to rebuild it.
 
 | Limitation | What to do instead |
 |---|---|
-| **Only the demo exists**: Peragus (101–107) and the Harbinger (151–153). No other planets, no new areas | Mods that hook rules and items work everywhere the game goes later |
+| **Only part of the game exists**: Peragus, the Harbinger, the Ebon Hawk and Telos. No new areas | Mods that hook rules and items work everywhere the game goes later |
 | **No new levels or areas.** A mod can't add a level or change a level's layout | Change what happens in a level through hooks and script functions |
 | **A replaced model can't move walls or floors**: the walkable layout comes from the game's walkmesh | Change how a room looks, not its shape underfoot |
-| **Hooks exist for 37 decisions** (the tables below). Stores and prices, party influence, alignment and minigames have none yet | Ask for a hook: each one is a small change in the game |
+| **Hooks exist for 50 decisions and events** (the tables below), stores, influence, alignment, forms and minigames among them | Ask for a hook: each one is a small change in the game |
 | **A folder mod's `main.gd` is read as source**: no `class_name`, no `preload` of files beside it | `load(mod_path("..."))`, or pack it into a `.zip` |
 | **Mac only for now**; a Windows build comes later | |
-| **The API is version 1 and may change** before 1.0 | Keep `api` in `mod.json` accurate; a mod for a newer API isn't loaded |
+| **Pazaak and swoop racing aren't in yet**, so `minigame_started` only ever says `"turret"` | Listen for any kind: the others will use the same events |
+
+## The API's promise
+
+The modding API is **locked for 1.0**, at version 1. New hooks, new context keys, new `KotorMod` methods and new
+parameters with defaults can still be added, but nothing a mod relies on is removed, renamed or changed:
+
+- every hook keeps its name and kind;
+- an event keeps its arguments, so your listener still fits;
+- a modifier keeps its value's type and every key it gives in `ctx`;
+- every `KotorMod` method keeps its name and parameters;
+- `mod.json`'s fields and the four kinds of replacement (textures, models, sounds, conversations) stay.
+
+The game holds itself to this: `modding_wiki/data/api_lock.json` records the API as it was locked, and the build checks
+the game against it before every release (`modding_wiki/api_lock.py`). A change that would break a mod stops the
+release. If one ever has to happen, `KotorMods.API_VERSION` goes up and a mod made for version 1 keeps loading.
 
 ## Rules for mod authors
 
@@ -353,6 +368,34 @@ and an example. The tables below are written from the same descriptions, so they
 | `door_opened` | event | `door: Node3D` | A door has opened, by anyone or any script. |
 | `container_opened` | event | `container: Node3D` | The player has opened a container: a footlocker, a corpse, a crate. |
 | `script_run` | event | `script_name: String, owner: Node` | One of the original game's scripts is about to run. |
+| `journal_updated` | event | `quest: String, state: int` | A quest's entry in the journal changed (a script's AddJournalQuestEntry moved it to another state). |
+
+### Companions and alignment
+
+| Hook | Kind | Value or arguments | What it's for |
+|---|---|---|---|
+| `influence_change` | modifier | `int`, ctx `{npc, influence, template}` | How much a companion's influence moves when a conversation or script changes it (ModifyInfluence). |
+| `influence_changed` | event | `npc: int, influence: int, amount: int` | A companion's influence moved, after it was kept within 0 to 100. The game also says "Influence gained" or "lost" on screen. |
+| `alignment_change` | modifier | `int`, ctx `{who, alignment}` | How far an alignment shifts: the player's, or a companion's (their own, or following the player's when influence pulls them). |
+| `alignment_changed` | event | `who: String, alignment: int, amount: int` | An alignment shifted. |
+| `dark_stage` | modifier | `int`, ctx `{alignment}` | How deep the dark side's marks show on the player's face: 0 for none, 1 to 4 for the four textures heads.2da gives each head (evil, very evil and so on). |
+
+### Stores and minigames
+
+| Hook | Kind | Value or arguments | What it's for |
+|---|---|---|---|
+| `store_price` | modifier | `int`, ctx `{store, resref, buying}` | What an item costs to buy at a store, or what the store pays for it. |
+| `store_bought` | event | `store: String, resref: String, price: int` | The player bought an item. |
+| `store_sold` | event | `store: String, resref: String, price: int` | The player sold an item. |
+| `minigame_started` | event | `kind: String` | A minigame has begun. So far that's the Ebon Hawk's turret on Peragus; pazaak and swoop racing will say so too once they're in. |
+| `minigame_finished` | event | `kind: String, result: int` | A minigame has ended. |
+
+### Lightsabers and forms
+
+| Hook | Kind | Value or arguments | What it's for |
+|---|---|---|---|
+| `form_bonus` | modifier | `float`, ctx `{who, what}` | One of a form's numbers, as it applies right now: a lightsaber form (Shii-Cho to Juyo) or a Force form (Force Channel to Force Mastery). |
+| `form_changed` | event | `key: String, kind: String, power: int` | Someone took up a form, or let one go. |
 
 <!-- hooks: end -->
 
@@ -464,4 +507,5 @@ The test mod for mod support, in the game's project (`modding/examples/hardcore`
 - [x] Export: an exported build loads a `.zip` from the `mods` folder beside the game. To check again: make
   `res://tools/mod_export_check.tscn` the main scene, take `tools/*` out of the preset's exclude filter, export, put
   `hardcore.zip` in `build/mods/`, run the app and look for `EXPORT CHECK: PASS`, then put both settings back
-- [ ] Hooks still to add as systems arrive: stores and prices, party influence, alignment shifts, minigames
+- [x] Hooks for stores and prices, influence, alignment and the dark side's marks, forms, the journal and minigames
+- [x] The API locked for 1.0: `modding_wiki/api_lock.py` checks every release against `modding_wiki/data/api_lock.json`

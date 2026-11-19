@@ -2,7 +2,7 @@
 
 Here's what's done, what I'm working on, and what's left before a 1.0. Checked boxes are done and tested.
 
-> **Where things are right now:** early access: Peragus and the Harbinger start to finish, and the Ebon Hawk and Telos (0.9.6), not yet played through.
+> **Where things are right now:** early access: Peragus and the Harbinger start to finish, and the Ebon Hawk and Telos (0.9.6), not yet played through. 0.9.8 adds influence, the light and dark side, crystals, forms and the journal across planets.
 > There will be bugs. What I'm going for is an engine recreation of KOTOR 2, meaning the original levels, scripts and
 > rules running the way they did, with a few modern touches (graphics settings, optional HD textures, an installer
 > that does the work for you). I'm one person, so I won't be able to fix, port or add everything.
@@ -68,16 +68,18 @@ Peragus doesn't use any of these, so they'll show up along with the planets that
 
 - [x] Stores (buying and selling) and credits (0.9.5)
 - [x] The galaxy map (0.9.5)
-- [ ] Influence and companion conversations
+- [x] Influence and companion conversations: influence from 0 to 100 starting at 50, "Influence gained" and "lost" on
+      screen, and companions' alignment following yours as influence pulls them (0.9.8)
 - [ ] Training companions as Jedi
 - [x] The full party, and swapping members (the party selection screen, 0.9.0)
 - [x] Companion settings: orders, when to heal, how to fight, which powers (0.9.0)
 - [x] Levels as data: a new level needs no game code, only building (0.9.0)
-- [ ] Lightsabers: building them, crystals, saber forms
+- [x] Lightsabers: colour crystals that change the blade (every colour's saber is built), and the seven lightsaber forms
+      and four Force forms at the numbers their descriptions give (0.9.8). Building one is the story's: its scripts run as written
 - [ ] Prestige classes
-- [ ] Light and dark side, and what they do to your powers and appearance
+- [x] Light and dark side: companions' own alignment and its Force costs, and the dark side's four stages on your face (0.9.8)
 - [ ] Pazaak and swoop racing (the turret minigame is in)
-- [ ] The journal across planets
+- [x] The journal across planets: grouped by planet, the latest news first, new updates marked, each quest's earlier entries (0.9.8)
 - [x] Enemies' combat feats (Power Attack, Flurry, Critical Strike...) and critical hits (0.9.6)
 - [ ] Every original script function the game calls: every built level has all it calls, except swoop racing's
       (tools/level_functions.py lists any that are missing)
@@ -111,7 +113,7 @@ The Mac installer builds the game from your own copy of KOTOR 2, so nothing from
 - [x] Collections, so you can save a set of mods under a name ("Hardcore playthrough", "HD overhaul") and switch
       between them
 - [x] Load order, plus a "Find best order" button that sorts mods by what each one asks for
-- [x] 30 hooks into the game's rules (damage, healing, XP, Force costs and more)
+- [x] 50 hooks into the game's rules and story (damage, healing, XP, Force costs, influence, alignment, stores and more)
 - [x] New-game choices (like Ironman) and saved data for each mod
 - [x] New items and outfits that sit alongside the game's own
 - [x] Texture overhauls that replace the game's textures by name
@@ -120,9 +122,10 @@ The Mac installer builds the game from your own copy of KOTOR 2, so nothing from
 
 **Later**
 - [ ] Put the modding wiki online
-- [ ] Hooks for stores, influence, alignment and minigames, once those systems exist
-- [ ] Replacing models, sounds and conversations
-- [ ] Lock the modding API for 1.0, so new hooks can be added but nothing gets renamed or removed
+- [x] Hooks for stores, influence, alignment, forms, the journal and minigames (0.9.8)
+- [x] Replacing models, sounds and conversations
+- [x] Lock the modding API for 1.0, so new hooks can be added but nothing gets renamed or removed (0.9.8: every release is
+      checked against the lock)
 
 ## Modernization
 
