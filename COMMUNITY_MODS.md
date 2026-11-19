@@ -43,6 +43,7 @@ the game's `mods` folder that you can switch off at any time, so the game itself
 | Relighting TSL | J | Better lighting in the first room (101PERt) | [Deadly Stream](https://deadlystream.com/files/file/2752-relighting-tsl/) |
 | Peragus Administration Level Room Model Fixes | | Fixes model and walkmesh errors in three Peragus rooms | Deadly Stream |
 | Fixed Hologram Models and Admiralty Redux | | Fixed hologram models | Deadly Stream |
+| TSL Backdrop Improvements 1.4 | Kexikus, with contributions by Jeroenimo (ship models used for backdrops), Kreia (Interdictor-class ship models) and Malkior (damage detail on the Ravager). Starfields made with Spacescape; nebula photos from NASA and hubblesite.org | Sharper, fuller space outside the windows: stars, the Peragus nebula, Telos from orbit, the fleets | [Deadly Stream](https://deadlystream.com/files/file/949-tsl-backdrop-improvements/) |
 
 **Why they're optional.** The demo plays the same without them: they change how it looks, not how it plays. The HD
 packs are big (several GB of downloads, about 0.7 GB once packed) and need a GPU with more video memory, so they
@@ -67,6 +68,24 @@ data in `out/_game`; nothing in Downloads or the game's install is changed.
 | Relighting 101PERt 2.1 | Model, walkmesh and 11 light bakes | Used as they are. No scripts. |
 | Planets HD 3.7 | 1,720 upscaled textures (TPC) for every planet, the Ebon Hawk, and screens and panels | Every texture the project has is replaced with the pack's version: 155 for Peragus and the Harbinger. Lightmaps, characters and the 25 textures the pack doesn't cover (skies, stars, a few small ones) stay as they were. Checked against the originals: same orientation, format and TXI settings in all 155. Laid under the fixes above, so they win where a name is shared. `step28_hd_textures.py` puts them in; Godot imports them VRAM-compressed. | **Installed as a mod:** Setup makes it into `planets_hd.zip` (`step43_hd_mods.py`) in the game's `mods` folder, so it can be switched off; the game data keeps the standard textures.
 | Vanilla Characters HD 3.1 | 863 upscaled character textures (TPC): bodies, heads, robes, droids | Every character texture the project has is replaced: 262 of 268, plus 8 that props use (corpses, Kreia on the slab). The hologram mod's textures win where they share a name (Dodonna's head), and its other five aren't in the pack. Same checks as the planets pack: orientation matches in all 263. The female player body loses alpha it never used, and gains an Xbox-only setting. Same steps as above. | **Installed as a mod:** Setup makes it into `characters_hd.zip` (`step43_hd_mods.py`) in the game's `mods` folder, so it can be switched off; the game data keeps the standard textures.
+
+## What TSL Backdrop Improvements replaces
+
+Used as a download like the others (Setup unpacks the `.7z` itself). `step04_upgrades.py` lays its `To Override`
+folder over the game copy, and `step38_upgrade_textures.py` swaps its pictures into every level that already has them.
+
+| Where | What it changes | In the remake now |
+|---|---|---|
+| Everywhere | Stars: `PER_Stars`, `PER_Stars02`, `HAR_Stars`, `TEL_Strs`, `NAR_Stars`, `NAR_D_stars`, `DXN_Stars` | Peragus, the Harbinger, the Ebon Hawk and Telos |
+| Peragus | The nebula (`PER_nebula01`), moving asteroids seen from the Administration Level (`101PERbl`), more asteroids and a second nebula outside (`104PERb`, `EBO_neb`) | Yes |
+| Harbinger | Peragus with its nebula and asteroids seen from the Command Deck (new room `151HARs`, added by its `151har.lyt`) | Yes |
+| Ebon Hawk | The hyperspace tunnel (`003EBOq`, `leh_hyper01`-`03`) | Yes |
+| Ebon Hawk | Moving asteroids during the escape from Peragus, Dxun and the blockade on arriving at Dxun (rooms `003EBOr`, `003EBOs` in its `003ebo.lyt`, shown by its scripts `bd_spawn_per`, `bd_spawn_dxun`, `bd_reset` from its versions of `003atton.dlg` and `attond.dlg`) | **Not used.** Its two conversations aren't TSLRCM's: their steps run other scripts in other places, and `003atton` is Atton's talk after the escape that opens the galaxy map. The game's own conversations, layout and rooms are kept. |
+| Telos | The planet's surface (`TEL_Plan`), the Ravager and Sith fighters (`TEL_Rav`, `TEL_SithFlt`), Carth's arrival with both fleets (`222TEL15`) | Yes. `222TEL15` replaces TSLRCM's visual-only version of that room |
+| Nar Shaddaa | Goto's yacht: the planet (`nar_pnt01`), the yacht's hull seen from inside (`351NARsb`, `NAR_D_Hull01`-`03`, `NAR_D_Hatch`) | Not built yet: used when Nar Shaddaa is |
+| Dxun and Onderon | The space battle and the Tobin scene: `MG_Ondr`, `MG_Ondr3`, `MG_OndrM`, `MG_SBK`, `001ebo16`, `002ebo2` | Not built yet |
+| Ravager | Telos placed properly, both fleets, real Sith fighters, more lasers, its exterior from the bridge (`851nih`, `852nih` layouts and rooms, `NIH_*` textures) | Not built yet |
+| Galaxy map (optional part) | Nar Shaddaa, Dxun and Onderon's pictures to match (`Gui_narshada`, `Gui_dxun`, `Gui_onderon`, `CM_narshad`, `gal_NarShaddaa_2`) | Not used yet: those planets aren't open |
 
 ## The three scripts that differ in 1.8.6
 

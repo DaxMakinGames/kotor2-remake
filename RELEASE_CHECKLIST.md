@@ -2,7 +2,7 @@
 
 Here's what's done, what I'm working on, and what's left before a 1.0. Checked boxes are done and tested.
 
-> **Where things are right now:** early access: Peragus and the Harbinger start to finish, and the Ebon Hawk and Telos (0.9.6), not yet played through. 0.9.8 adds influence, the light and dark side, crystals, forms and the journal across planets.
+> **Where things are right now:** early access: Peragus and the Harbinger start to finish, and the Ebon Hawk and Telos (0.9.6), not yet played through. 0.9.8 adds influence, the light and dark side, crystals, forms and the journal across planets; 0.9.9 swoop racing.
 > There will be bugs. What I'm going for is an engine recreation of KOTOR 2, meaning the original levels, scripts and
 > rules running the way they did, with a few modern touches (graphics settings, optional HD textures, an installer
 > that does the work for you). I'm one person, so I won't be able to fix, port or add everything.
@@ -51,8 +51,8 @@ it's **walked** (every area toured: rooms, doors, containers, conversations and 
 |---|---|---|---|
 | Peragus (mining facility) | ✅ | ✅ | in progress |
 | The Harbinger | ✅ | ✅ | in progress |
-| Telos: Citadel Station | ✅ | ✅ | ⬜ |
-| Telos: the surface and the academy | ✅ | ✅ (not the swoop race) | ⬜ |
+| Telos: Citadel Station | ✅ | ✅ (the swoop race too, 0.9.9) | in progress |
+| Telos: the surface and the academy | ✅ | ✅ | in progress |
 | The Ebon Hawk and the galaxy map | ✅ | ✅ | ⬜ |
 | Nar Shaddaa | ⬜ | ⬜ | ⬜ |
 | Dxun | ⬜ | ⬜ | ⬜ |
@@ -78,10 +78,11 @@ Peragus doesn't use any of these, so they'll show up along with the planets that
       and four Force forms at the numbers their descriptions give (0.9.8). Building one is the story's: its scripts run as written
 - [ ] Prestige classes
 - [x] Light and dark side: companions' own alignment and its Force costs, and the dark side's four stages on your face (0.9.8)
-- [ ] Pazaak and swoop racing (the turret minigame is in)
+- [x] Swoop racing on Telos (0.9.9), as the original's own scripts run it
+- [ ] Pazaak (the turret minigame and swoop racing are in)
 - [x] The journal across planets: grouped by planet, the latest news first, new updates marked, each quest's earlier entries (0.9.8)
 - [x] Enemies' combat feats (Power Attack, Flurry, Critical Strike...) and critical hits (0.9.6)
-- [ ] Every original script function the game calls: every built level has all it calls, except swoop racing's
+- [x] Every original script function the game calls: every built level has all it calls, swoop racing's too (0.9.9)
       (tools/level_functions.py lists any that are missing)
 
 ## Installer

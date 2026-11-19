@@ -275,7 +275,7 @@ original engine, not to rebuild it.
 | **Hooks exist for 50 decisions and events** (the tables below), stores, influence, alignment, forms and minigames among them | Ask for a hook: each one is a small change in the game |
 | **A folder mod's `main.gd` is read as source**: no `class_name`, no `preload` of files beside it | `load(mod_path("..."))`, or pack it into a `.zip` |
 | **Mac only for now**; a Windows build comes later | |
-| **Pazaak and swoop racing aren't in yet**, so `minigame_started` only ever says `"turret"` | Listen for any kind: the others will use the same events |
+| **Pazaak isn't in yet**, so `minigame_started` says `"turret"` or `"swoop"` | Listen for any kind: the others will use the same events |
 
 ## The API's promise
 
@@ -387,7 +387,7 @@ and an example. The tables below are written from the same descriptions, so they
 | `store_price` | modifier | `int`, ctx `{store, resref, buying}` | What an item costs to buy at a store, or what the store pays for it. |
 | `store_bought` | event | `store: String, resref: String, price: int` | The player bought an item. |
 | `store_sold` | event | `store: String, resref: String, price: int` | The player sold an item. |
-| `minigame_started` | event | `kind: String` | A minigame has begun. So far that's the Ebon Hawk's turret on Peragus; pazaak and swoop racing will say so too once they're in. |
+| `minigame_started` | event | `kind: String` | A minigame has begun: "turret" (the Ebon Hawk's gun on Peragus) or "swoop" (the race on Telos). Pazaak will say so too once it's in. |
 | `minigame_finished` | event | `kind: String, result: int` | A minigame has ended. |
 
 ### Lightsabers and forms

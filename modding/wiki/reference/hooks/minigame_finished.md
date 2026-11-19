@@ -13,12 +13,12 @@ on(&"minigame_finished", func(kind: String, result: int): ...)
 | Argument | Type | What |
 |---|---|---|
 | `kind` | `String` | "turret" |
-| `result` | `int` | the minigame's own result global (107PER_MG_FINISHED for the turret) |
+| `result` | `int` | the minigame's own result: 107PER_MG_FINISHED for the turret; for a swoop race its time in hundredths of a second (59:59.99, 359999, when the race was lost or forfeited) |
 
 
 ## Where the game calls it
 
-KotorTurret
+KotorTurret, KotorSwoop
 
 ## Example
 

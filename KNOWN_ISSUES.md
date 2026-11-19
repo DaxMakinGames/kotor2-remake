@@ -1,7 +1,7 @@
 # Known issues
 
 Things I already know about in the demo, so you don't need to report them (but if you find out more, add it to the
-issue linked here, or open one). Last updated for **0.9.8** (early access).
+issue linked here, or open one). Last updated for **0.9.9** (early access).
 
 ## Installing
 
@@ -22,6 +22,8 @@ issue linked here, or open one). Last updated for **0.9.8** (early access).
 
 ## In the game
 
+- **0.9.8: a black screen after looting the body in the Peragus morgue**, with Kreia standing stiff on the slab. Her
+  scene couldn't start, and the story couldn't go on past it. Fixed in 0.9.9: run the new Setup.
 - **A rare crash when changing level.** Seen once, going from the mining tunnels to the fuel depot. If it happens to
   you, the title screen offers to report it with its log, which would really help.
 - **Controller support is new.** If a screen can't be used with a controller, or a button does the wrong thing,
@@ -39,7 +41,9 @@ issue linked here, or open one). Last updated for **0.9.8** (early access).
 - **Influence, the light and dark side, crystals and forms are new** in 0.9.8. Companions' conversations that
   depend on influence mostly come after Telos, so there's less to see of it yet; reports of a companion reacting
   wrongly are welcome.
-- **Swoop racing on Telos isn't in yet**, and the planets after Telos aren't open yet: the game says so if you set course for one.
+- **Swoop racing is new** in 0.9.9. At GO and after any crash the swoop sits in neutral until you shift up, as in the
+  original. If the race seems to stop for no reason, please report where on the course it happened.
+- **The planets after Telos aren't open yet**: the game says so if you set course for one.
 - **Stores and the galaxy map are new** in 0.9.5. Peragus has no store, so they show up with Telos.
 - **The party selection screen and Companion Settings are new** in 0.9.0. Peragus never asks for the party screen
   itself; open it from the Party page (**Choose party...**) to try it.

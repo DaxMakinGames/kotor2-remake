@@ -77,7 +77,7 @@ Every hook the game offers, 50 in all. **Modifiers** change a value before the g
 | [store_price](store_price.md) | modifier | What an item costs to buy at a store, or what the store pays for it. |
 | [store_bought](store_bought.md) | event | The player bought an item. |
 | [store_sold](store_sold.md) | event | The player sold an item. |
-| [minigame_started](minigame_started.md) | event | A minigame has begun. So far that's the Ebon Hawk's turret on Peragus; pazaak and swoop racing will say so too once they're in. |
+| [minigame_started](minigame_started.md) | event | A minigame has begun: "turret" (the Ebon Hawk's gun on Peragus) or "swoop" (the race on Telos). Pazaak will say so too once it's in. |
 | [minigame_finished](minigame_finished.md) | event | A minigame has ended. |
 
 ## Lightsabers and forms

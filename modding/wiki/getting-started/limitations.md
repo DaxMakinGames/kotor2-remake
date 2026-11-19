@@ -20,7 +20,7 @@
 | **A folder mod's `main.gd` is read as source:** no `class_name`, no `preload` of files beside it | `load(mod_path("..."))`, or pack the mod into a `.zip` |
 | **Turning mods on or off needs a restart** | Settings and new-game choices change at once |
 | **Mac only for now.** A Windows build comes later | |
-| **Pazaak and swoop racing aren't in yet**, so `minigame_started` only says `"turret"` | Listen for any kind: the others will use the same events |
+| **Pazaak isn't in yet**, so `minigame_started` says `"turret"` or `"swoop"` | Listen for any kind: the others will use the same events |
 
 The API itself is **locked for 1.0** (version 1): hooks, their arguments and context keys, `KotorMod`'s methods and `mod.json`'s fields can be added to but never removed or changed. Every release is checked against the lock (`modding_wiki/api_lock.py`).
 
