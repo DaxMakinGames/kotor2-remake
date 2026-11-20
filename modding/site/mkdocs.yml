@@ -1,0 +1,122 @@
+site_name: KOTOR 2 Remake Modding Wiki
+site_description: How to make mods for the KOTOR 2 remake - hooks, items, game modes, art.
+docs_dir: docs
+theme:
+  name: material
+  palette:
+    scheme: slate
+    primary: black
+    accent: blue grey
+  features:
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+extra_css:
+  - style.css
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.superfences
+  - pymdownx.highlight
+nav:
+  - Home: index.md
+  - Getting started:
+      - Installing mods: getting-started/installing.md
+      - Your first mod: getting-started/first-mod.md
+      - Packing and sharing: getting-started/packing.md
+      - Current limitations: getting-started/limitations.md
+  - Guides:
+      - Recipes: guides/recipes.md
+      - Hooks explained: guides/hooks.md
+      - Settings and new-game choices: guides/settings.md
+      - Saving your mod's state: guides/saving.md
+      - Adding items: guides/items.md
+      - Conversations, quests and stores: guides/conversations.md
+      - Classic KOTOR 2 mods: guides/classic-mods.md
+      - Outfits and textures: guides/outfits.md
+      - Texture overhauls: guides/textures.md
+      - Replacing script functions: guides/script-functions.md
+      - Making a game mode: guides/game-modes.md
+      - Working with other mods: guides/compatibility.md
+      - Testing a mod: guides/testing.md
+      - Bring a KOTOR mod over: guides/porting.md
+  - Reference:
+      - mod.json: reference/mod-json.md
+      - KotorMod: reference/kotormod.md
+      - The Kotor object: reference/kotor.md
+      - Item fields: reference/item-fields.md
+      - Hooks:
+          - reference/hooks/index.md
+          # hooks: start (written by build_hooks.py)
+          - Game flow:
+              - game_started: reference/hooks/game_started.md
+              - level_loaded: reference/hooks/level_loaded.md
+              - level_leaving: reference/hooks/level_leaving.md
+              - heartbeat: reference/hooks/heartbeat.md
+              - paused: reference/hooks/paused.md
+              - run_finished: reference/hooks/run_finished.md
+              - can_load: reference/hooks/can_load.md
+          - Combat and survival:
+              - attack_bonus: reference/hooks/attack_bonus.md
+              - defense: reference/hooks/defense.md
+              - damage_dealt: reference/hooks/damage_dealt.md
+              - can_attack: reference/hooks/can_attack.md
+              - attack_made: reference/hooks/attack_made.md
+              - deflect_chance: reference/hooks/deflect_chance.md
+              - deflected: reference/hooks/deflected.md
+              - damaged: reference/hooks/damaged.md
+              - died: reference/hooks/died.md
+              - player_down: reference/hooks/player_down.md
+              - regen_rate: reference/hooks/regen_rate.md
+              - shield_rate: reference/hooks/shield_rate.md
+              - heal_amount: reference/hooks/heal_amount.md
+              - enemy_think: reference/hooks/enemy_think.md
+              - npc_scene: reference/hooks/npc_scene.md
+              - npc_spawned: reference/hooks/npc_spawned.md
+          - Character and progress:
+              - xp_award: reference/hooks/xp_award.md
+              - skill: reference/hooks/skill.md
+              - force_cost: reference/hooks/force_cost.md
+              - level_up: reference/hooks/level_up.md
+              - item_added: reference/hooks/item_added.md
+              - item_removed: reference/hooks/item_removed.md
+              - can_equip: reference/hooks/can_equip.md
+              - crafting_cost: reference/hooks/crafting_cost.md
+          - Story and world:
+              - conversation_started: reference/hooks/conversation_started.md
+              - conversation_ended: reference/hooks/conversation_ended.md
+              - global_changed: reference/hooks/global_changed.md
+              - door_opened: reference/hooks/door_opened.md
+              - container_opened: reference/hooks/container_opened.md
+              - script_run: reference/hooks/script_run.md
+              - journal_updated: reference/hooks/journal_updated.md
+          - Companions and alignment:
+              - influence_change: reference/hooks/influence_change.md
+              - influence_changed: reference/hooks/influence_changed.md
+              - alignment_change: reference/hooks/alignment_change.md
+              - alignment_changed: reference/hooks/alignment_changed.md
+              - dark_stage: reference/hooks/dark_stage.md
+          - Stores and minigames:
+              - store_price: reference/hooks/store_price.md
+              - store_bought: reference/hooks/store_bought.md
+              - store_sold: reference/hooks/store_sold.md
+              - minigame_started: reference/hooks/minigame_started.md
+              - minigame_finished: reference/hooks/minigame_finished.md
+          - Lightsabers and forms:
+              - form_bonus: reference/hooks/form_bonus.md
+              - form_changed: reference/hooks/form_changed.md
+          # hooks: end
+  - Examples:
+      - Hardcore: examples/hardcore.md
+      - Prequel Robes: examples/prequel-robes.md
+  - For engine developers:
+      - Adding a hook: engine/adding-hooks.md
+      - How the game is built: engine/architecture.md
+      - Publishing this wiki: engine/publishing.md

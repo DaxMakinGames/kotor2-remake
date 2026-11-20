@@ -1,0 +1,10 @@
+/* black and gray, like the game's menus */
+[data-md-color-scheme="slate"] {
+  --md-default-bg-color: #0d0f12;
+  --md-default-fg-color--light: #b8bec6;
+  --md-typeset-a-color: #9fb3c8;
+}
+.md-header, .md-tabs { background: linear-gradient(180deg, #1b1e23 0%, #0d0f12 100%); }
+.hook-kind { padding: 2px 8px; border-radius: 3px; font-size: 0.75em; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; }
+.hook-kind.modifier { background: #2d4a63; color: #dce8f3; }
+.hook-kind.event { background: #4a3d24; color: #f0e3c8; }

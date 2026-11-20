@@ -1,0 +1,41 @@
+# The modding wiki as a website: built from modding/site with MkDocs (Material) and published to GitHub Pages
+# whenever it changes. To turn it on once: Settings -> Pages -> Source: GitHub Actions.
+name: Modding wiki
+
+on:
+  push:
+    branches: [main]
+    paths: ["modding/site/**", ".github/workflows/wiki.yml"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install mkdocs-material
+      - run: mkdocs build -f modding/site/mkdocs.yml -d "$GITHUB_WORKSPACE/_site"
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

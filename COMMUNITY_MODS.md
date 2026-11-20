@@ -49,6 +49,12 @@ the game's `mods` folder that you can switch off at any time, so the game itself
 packs are big (several GB of downloads, about 0.7 GB once packed) and need a GPU with more video memory, so they
 shouldn't be forced on anyone. Making them mods also shows how a texture overhaul works in the remake's mod system.
 
+## Classic KOTOR 2 mods
+
+Other mods made for the original's Override folder can go in a **KOTOR2 Classic Mods** folder in Downloads, one
+unpacked folder each. Setup's build uses their textures and models; scripts, conversations, templates, 2DA tables and
+TSLPatcher installers are left out (the build's `classic_mods.json` lists what was used and what wasn't).
+
 ## About permission
 
 The optional mods are used **without their authors' direct permission**, as examples of what porting a mod to the

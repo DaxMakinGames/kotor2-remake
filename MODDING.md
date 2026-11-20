@@ -157,6 +157,14 @@ What a mod has (`scripts/mods/kotor_mod.gd`):
 | `add_item(load(mod_path("items/x.tres")))` | The same, from an item made in Godot's Inspector: **New Resource → KotorItemDef**, saved in the mod's folder |
 | `add_items_in(folder)` | Every `KotorItemDef` (`.tres`) in a folder of the mod |
 | `give_item(resref, count)` | Puts an item in the party's inventory |
+| `start_conversation(conv, owner)` | Starts a conversation: one of the mod's own (its `conversations` folder) or the game's |
+| `give_conversation(tag, conv)` | Gives whoever has that tag in the level a conversation: talking to them starts it. Call it from `on(&"level_loaded", ...)` |
+| `add_conversation_action(name, fn)` | Something the mod's conversations can do: a line with `$> Kotor.act("name", ...)` runs `fn(params: Array, owner)` |
+| `add_conversation_check(name, fn)` | A condition its conversations can test: `[if Kotor.cond("name", ...) /]` asks `fn(params: Array) -> bool` |
+| `add_quest(tag, name, entries, planet)` | A quest of the mod's own in the journal: `entries` is `{state: text}` |
+| `set_quest(tag, state)` | Moves a quest on, as the game's scripts do (the journal shows its new entry) |
+| `add_store(tag, name, items, markup, markdown)` | A store of the mod's own: items as resrefs, or `{"resref", "infinite"}` for stock that never runs out |
+| `open_store(tag)` | Opens it (or one of the level's stores, by its tag) |
 | `mod_path(file)` | The path of a file of the mod's, for `load()` |
 | `write_log(text)` | A line in the game's log, marked with the mod's id |
 | `id`, `info`, `folder` | The mod's id, its whole `mod.json`, and where its files are |
@@ -255,10 +263,12 @@ case, no extension). Later mods in the load order win, and turning the mod off b
   can walk. Characters keep the original skeleton's bone names, or animations won't fit.
 - **Sounds** (`.ogg`, `.wav` or `.mp3`): voice lines by their resref (`101101atton001`), sound effects by theirs, music
   tracks by theirs. Each is read when it plays.
-- **Conversations** (`.dialogue`): by the conversation's name (`101atton`). Write them in the format the game's own
-  conversations use (in the game's project, `import/kotor/dialogue/`; an installed game doesn't keep a copy you can
-  read yet): each line calls `Kotor.on_line(...)` for its voice and camera,
-  and replies can run the game's scripts. A conversation with a new name can be started from a mod's script.
+- **Conversations** (`.dialogue`): by the conversation's name (`101atton`), in Dialogue Manager's format. A
+  conversation with a **new** name is the mod's own: give it to a character with `give_conversation`, or start it with
+  `start_conversation`. Its lines can run the mod's own actions and checks (`add_conversation_action`,
+  `add_conversation_check`) through `Kotor.act("name", ...)` and `Kotor.cond("name", ...)`, as the game's own
+  conversations run its scripts. A line can also call `Kotor.on_line(...)` for a voice and camera, as the game's do;
+  without one, the line is shown with the conversation's own camera. The Cantina Errand example is a whole one.
 - A folder mod's models and conversations are read as the game runs; a packed mod's (`modding/tools/pack_art_mod.py`) are
   imported, which loads faster.
 
@@ -276,6 +286,22 @@ original engine, not to rebuild it.
 | **A folder mod's `main.gd` is read as source**: no `class_name`, no `preload` of files beside it | `load(mod_path("..."))`, or pack it into a `.zip` |
 | **Mac only for now**; a Windows build comes later | |
 | **Pazaak isn't in yet**, so `minigame_started` says `"turret"` or `"swoop"` | Listen for any kind: the others will use the same events |
+| **A classic KOTOR 2 mod brings only its pictures and models** (see below) | Its scripts, conversations and tables would need porting: hooks, items and the mod's own conversations do most of it |
+
+## Classic KOTOR 2 mods
+
+Years of KOTOR 2 mods were made for the original's Override folder. Put a classic mod's folder (as you downloaded it,
+unpacked) in **`KOTOR2 Classic Mods`** in your Downloads folder, and Setup's next build lays what the remake can use
+over the game it builds from:
+
+- **Used:** textures (`.tga`, `.tpc`, `.dds`, with their `.txi`) and models (`.mdl`, `.mdx`), by name, as the original
+  would. A texture or model mod usually just works.
+- **Not used:** scripts, conversations, templates and tables (`.ncs`, `.dlg`, `.utc`, `.2da` and the like), and
+  TSLPatcher installers (`tslpatchdata`). The remake runs the game's own story with TSLRCM's fixes; a mod's version of
+  one of those was never tested with it. To bring one over, rebuild it as a mod of this game: the wiki's
+  "Bring a KOTOR mod over" shows how.
+
+What was used and what wasn't, for each one, is in the build's `classic_mods.json`.
 
 ## The API's promise
 
@@ -439,6 +465,17 @@ What's already data, and can change without code:
 
 `import/` is built by the pipeline (Setup runs it on the player's computer) and gets overwritten. A mod must never edit it. It
 replaces files from its own `.pck` or `.zip`, or changes behavior through hooks.
+
+## More examples: content
+
+Four examples of content, each in `mods_examples` and tested by `tools/content_mods_test.gd`:
+
+| Mod | What it does | What it shows |
+|---|---|---|
+| Cantina Errand (`cantina_errand`) | A Twi'lek in the Citadel Station cantina asks for two medpacs, and pays for them | `add_quest`, a conversation of its own, `give_conversation`, `add_conversation_action` and `add_conversation_check`, `save_data` |
+| Aqualish Trader (`aqualish_trader`) | The cantina's Aqualish sells field supplies | `add_store` and `open_store`, opened from its conversation |
+| Clean Floors (`clean_floors`) | One of Peragus's floor textures replaced by a picture of its own | A texture overhaul: `mod.json` and pictures named as the game's, no script |
+| Swoop Coach (`swoop_coach`) | Keeps your best swoop time, says the time to beat, pays a bonus for a new best | `minigame_started` and `minigame_finished`, a setting, `save_data` |
 
 ## More examples: Starter Mod and five gameplay mods
 

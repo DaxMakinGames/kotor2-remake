@@ -2,7 +2,7 @@
 
 Here's what's done, what I'm working on, and what's left before a 1.0. Checked boxes are done and tested.
 
-> **Where things are right now:** early access: Peragus and the Harbinger start to finish, and the Ebon Hawk and Telos (0.9.6), not yet played through. 0.9.8 adds influence, the light and dark side, crystals, forms and the journal across planets; 0.9.9 swoop racing.
+> **Where things are right now:** early access: Peragus and the Harbinger start to finish, and the Ebon Hawk and Telos (0.9.6), not yet played through. 0.9.8 adds influence, the light and dark side, crystals, forms and the journal across planets; 0.9.9 swoop racing; 0.9.10 skills in play, enemy scaling, party voices and mod conversations.
 > There will be bugs. What I'm going for is an engine recreation of KOTOR 2, meaning the original levels, scripts and
 > rules running the way they did, with a few modern touches (graphics settings, optional HD textures, an installer
 > that does the work for you). I'm one person, so I won't be able to fix, port or add everything.
@@ -79,6 +79,9 @@ Peragus doesn't use any of these, so they'll show up along with the planets that
 - [ ] Prestige classes
 - [x] Light and dark side: companions' own alignment and its Force costs, and the dark side's four stages on your face (0.9.8)
 - [x] Swoop racing on Telos (0.9.9), as the original's own scripts run it
+- [x] Skills in play: mines found, disarmed, recovered and set (Awareness, Demolitions), and Stealth Mode (0.9.10)
+- [x] Enemies scaled to the party, as autobalance.2da has it (0.9.10)
+- [x] The party's own voice sets in play: battle cries, pain, low health, mines, stealth, falling behind (0.9.10)
 - [ ] Pazaak (the turret minigame and swoop racing are in)
 - [x] The journal across planets: grouped by planet, the latest news first, new updates marked, each quest's earlier entries (0.9.8)
 - [x] Enemies' combat feats (Power Attack, Flurry, Critical Strike...) and critical hits (0.9.6)
