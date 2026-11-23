@@ -105,7 +105,9 @@ The Mac installer builds the game from your own copy of KOTOR 2, so nothing from
 - [ ] Tested from scratch on the whole demo, start to finish in the window
 - [ ] Tested on a second Mac
 - [ ] Windows
-- [ ] Linux and Steam Deck
+- [ ] Linux and Steam Deck (the pipeline reads the game's folders in any case since the SteamOS fix; an install there
+      is still to be tested)
+- [x] Fits bigger screens: opens sized to the display, and can be resized
 - [ ] Checks the game works before you launch it the first time
 
 ## Modding
@@ -154,16 +156,20 @@ I'm keeping this light on purpose. The original's look and rules come first.
 - [x] Enhanced effects (Classic keeps the original's): glow, filmic tone mapping and soft shadowing in corners;
       lightsabers that light the room; glowing blaster bolts and scorch marks; layered explosions with a look per
       grenade type; hit flashes and shield ripples ([VFX plan](VFX_PLAN.md))
-- [ ] Enhanced Force powers, holograms, steam and screens (the rest of the VFX plan)
-- [ ] Better lighting where the original's lighting is broken
-- [ ] Menus checked on widescreen and high-resolution displays
+- [x] Enhanced Force powers, holograms, steam and screens (the rest of the VFX plan)
+- [x] Better lighting where the original's lighting is broken: screens no longer wash out, rooms with no baked light
+      keep their ambient light, and Nar Shaddaa's tunnels are lit to see by (levels.json light_scale, ambient_scale)
+- [x] Menus checked on widescreen and high-resolution displays (21:9, 4K-class Retina, Steam Deck)
+- [x] A changelog (public/CHANGELOG.md): add each version's lines to it with its release notes
 
 ## Platforms
 
 - [x] Mac (Apple Silicon)
 - [ ] A signed Mac app, so you don't have to right-click and choose Open (that needs Apple's $99/year developer program)
 - [ ] Windows (it'll warn you the app isn't signed)
-- [ ] Linux and Steam Deck
+- [ ] Linux and Steam Deck (the pipeline reads the game's folders in any case since the SteamOS fix; an install there
+      is still to be tested)
+- [x] Fits bigger screens: opens sized to the display, and can be resized
 - [ ] Minimum and recommended specs, actually measured
 - [ ] Load times and frame rates measured in the heaviest scenes
 
