@@ -63,6 +63,9 @@ You don't need to do them all, or in order. Even "I checked X and it was fine" i
 - [ ] Every menu can be used with the d-pad, A and B.
 - [ ] Moving, the camera, attacking, Force powers (hold Y, aim with the right stick) and the quick items work.
 - [ ] Prompts name the controller's buttons.
+- [ ] Holding L3 turns Stealth Mode on and off, and holding R3 has the party hold or follow; a quick tap of either
+      still switches character or sends the party to attack.
+- [ ] In the inventory: LT and RT change the filter, R3 the sort, X equips better gear, Y marks junk.
 
 ### 11. The new options
 **Where:** Options (Graphics, Gameplay, Accessibility and Controls tabs), the Party page, the map.

@@ -9,9 +9,9 @@ It runs the original game's own levels, conversations and scripts, built on your
 
 > [!WARNING]
 > **Early access.** Peragus and the Harbinger start to finish, the Ebon Hawk and Telos, on Mac, Windows and Steam
-> Deck. New in 0.9.11: the Steam Deck's Setup fixed, screens that no longer wash out white, Setup sized for your
-> display, and Enhanced Force powers and ambience. Since 0.9.10: mines, Stealth Mode and enemies that scale with you,
-> and the party's own voices in a fight. Telos's scenes have been checked in story order, but it hasn't been played
+> Deck. New in 0.9.12: a Force wheel of six powers you choose on a new Powers page, every armour and weapon shown on
+> you and your companions, inventory filters, sorting and junk, and every action on a controller. Since 0.9.11: the
+> Steam Deck's Setup fixed and screens that no longer wash out white. Telos's scenes have been checked in story order, but it hasn't been played
 > through end to end by hand yet.
 > Things are expected to be broken.
 > It's an engine recreation: the original game as it was, with only light modernization. See the
@@ -167,8 +167,8 @@ adding the game to Steam for Game Mode).
 **Updating:** download the new Setup and run it, and it says **Update**, with what's new. When the new version only
 changes the game, that takes about a minute. When it adds levels (0.9.6 adds the Ebon Hawk and Telos), it builds only
 those, so it needs your copy of KOTOR 2 and TSLRCM again and about 15 GB free. Either way, the levels you have, your
-mods, saves and settings stay as they are. 0.9.11 builds the game data again (it has new parts: conversations from the
-game's shared files and the swoop race's track data), so like a first install it needs your copy of KOTOR 2, TSLRCM and
+mods, saves and settings stay as they are. 0.9.12 builds the game data again (it has new parts: every suit of armour and
+every weapon in the game, and companions' bodies in each armour), so like a first install it needs your copy of KOTOR 2, TSLRCM and
 the full build's disk space; your saves, settings and mods are kept.
 
 Why these mods, and what each one does: [COMMUNITY_MODS.md](COMMUNITY_MODS.md).

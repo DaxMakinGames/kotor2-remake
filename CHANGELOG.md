@@ -3,6 +3,26 @@
 What changed in each version, newest first. Every release's full notes, with downloads, are on the
 [releases page](https://github.com/DaxMakinGames/kotor2-remake/releases).
 
+## 0.9.12 (2026-11-23)
+
+- **A Force wheel you choose.** The wheel holds six powers, so a Jedi with dozens still picks from a clear ring. A new
+  Powers page (O, or between Character and Party) lists every power you know by side, with its cost and description,
+  and the wheel as it looks in play: pick a power to put it on or take it off, and move it round with [ and ]. Passive
+  powers work by being known and take no place. Until you choose, the wheel holds your strongest powers.
+- **What you wear shows.** Every suit of armour and every weapon in the game can now be seen worn and held, not only
+  the ones found on the levels built so far, so armour bought at a store changes how you look. Companions change too:
+  Atton, Mira, Visas, Bao-Dur and the Disciple wear the armour you give them, as in the original. Fixed: changing
+  armour with a lightsaber in hand left your character standing in the air, out of sight.
+- **A better inventory.** Filter by kind (weapons, armor, usable, gear, upgrades, junk) and sort by name, value or
+  newest. Items that beat what you're wearing say BETTER, and "Equip better" puts them all on; it only suggests what the
+  original's rules would have you wear well (armour you're trained in, and none that would shut off a Jedi's powers).
+  Mark items as junk with J, right-click or Y, and sell all your junk at once from a store's Sell tab.
+- **Every action on a controller.** Hold L3 for Stealth Mode and R3 to have the party hold or follow (a tap still
+  switches character and sends the party at your target). In the inventory, LT and RT change the filter, R3 the sort
+  and X equips better gear.
+- **People stand on the ground.** With Effects on Enhanced, everyone has a soft shadow on the floor beneath them. It
+  follows slopes and stairs, fades as they leave the ground, and goes with them when they're hidden.
+
 ## 0.9.11 (2026-11-23)
 
 **Fixed**

@@ -161,6 +161,8 @@ I'm keeping this light on purpose. The original's look and rules come first.
       keep their ambient light, and Nar Shaddaa's tunnels are lit to see by (levels.json light_scale, ambient_scale)
 - [x] Menus checked on widescreen and high-resolution displays (21:9, 4K-class Retina, Steam Deck)
 - [x] A changelog (public/CHANGELOG.md): add each version's lines to it with its release notes
+- [x] Contact shadows: everyone stands on the floor (Enhanced)
+- [x] Inventory: filters, sorting, junk sold all at once at a store, and "Equip better" within the original's rules
 
 ## Platforms
 
