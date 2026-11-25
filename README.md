@@ -10,7 +10,8 @@ It runs the original game's own levels, conversations and scripts, built on your
 > [!WARNING]
 > **Early access.** Peragus and the Harbinger start to finish, the Ebon Hawk and Telos, on Mac, Windows and Steam
 > Deck. New in 0.9.13: clearer menus (the character sheet, equipment slots, filters, the journal and the security check), and
-> Peragus fixed for T3 (the welded hangar door, the droid ambush, the Ebon Hawk the right way up). Since 0.9.12: a Force wheel of six powers you choose on a new Powers page, every armour and weapon shown on
+> Peragus fixed (the welded hangar door, the droid ambush, the Ebon Hawk the right way up, HK-50's laser, space and the
+> space suit on the walk outside, the Sith assassins' stealth). Since 0.9.12: a Force wheel of six powers you choose on a new Powers page, every armour and weapon shown on
 > you and your companions, inventory filters, sorting and junk, and every action on a controller. Since 0.9.11: the
 > Steam Deck's Setup fixed and screens that no longer wash out white. Telos's scenes have been checked in story order, but it hasn't been played
 > through end to end by hand yet.

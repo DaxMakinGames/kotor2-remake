@@ -6,7 +6,8 @@ What changed in each version, newest first. Every release's full notes, with dow
 ## 0.9.13 (2026-11-24)
 
 The first 0.9.12 Setups were built before these changes; this version brings them to anyone who installed it then.
-Updating from 0.9.12 takes about a minute and keeps the game data.
+Updating from 0.9.12 takes about a minute and keeps the game data; the space suit's walk and the droids' shields need
+it built again (Setup: Build it again).
 
 - **Clearer menus.** The character sheet reads at a glance: attributes and saving throws centred with their modifiers,
   experience and alignment on labelled bars, class skills marked, and Force powers with their icons. Equipment slots
@@ -19,6 +20,11 @@ Updating from 0.9.12 takes about a minute and keeps the game data.
   depot, as in the original: set one beside it and step back (a mine you fail to set stays in your hands). In the droid
   ambush on the way back, both droids now raise their shields and face the way the scene places them. The Ebon Hawk's
   hull is the right way up wherever it's parked.
+- **Fixed on Peragus, in the fuel depot and outside:** HK-50 holds its mining laser in its hand instead of leaving it
+  in the air. On the walk outside, space and the asteroid field show instead of black, the space suit walks, runs and
+  stands in its own heavy gait, and a Force power no longer takes the suit off (the Force can't be used out there, as
+  in the original's restricted walk). The Sith assassins in Kreia's scene fade into sight as they arrive and out of it
+  as they leave.
 
 ## 0.9.12 (2026-11-23)
 
