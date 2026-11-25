@@ -3,6 +3,23 @@
 What changed in each version, newest first. Every release's full notes, with downloads, are on the
 [releases page](https://github.com/DaxMakinGames/kotor2-remake/releases).
 
+## 0.9.13 (2026-11-24)
+
+The first 0.9.12 Setups were built before these changes; this version brings them to anyone who installed it then.
+Updating from 0.9.12 takes about a minute and keeps the game data.
+
+- **Clearer menus.** The character sheet reads at a glance: attributes and saving throws centred with their modifiers,
+  experience and alignment on labelled bars, class skills marked, and Force powers with their icons. Equipment slots
+  show each item's icon in a slot of its own. The filters are one bar with a count on each, and the security check is
+  a cleaner card with its roll, the sum and the result. The journal reads as the original's log: the latest entry, where
+  it was written, and the earlier ones under it, with the original's console and mobile controls put as this game's.
+  The map fills its page. Doors to another level say where they go ("Go to Peragus Fuel Depot").
+- **Fixed:** in the menus, every tab once clicked stayed lit. Map notes are gone: the map shows the level as it is.
+- **Fixed on Peragus, as T3:** the welded door in the hangar can be blown open with the sonic charges from the fuel
+  depot, as in the original: set one beside it and step back (a mine you fail to set stays in your hands). In the droid
+  ambush on the way back, both droids now raise their shields and face the way the scene places them. The Ebon Hawk's
+  hull is the right way up wherever it's parked.
+
 ## 0.9.12 (2026-11-23)
 
 - **A Force wheel you choose.** The wheel holds six powers, so a Jedi with dozens still picks from a clear ring. A new
@@ -20,17 +37,6 @@ What changed in each version, newest first. Every release's full notes, with dow
 - **Every action on a controller.** Hold L3 for Stealth Mode and R3 to have the party hold or follow (a tap still
   switches character and sends the party at your target). In the inventory, LT and RT change the filter, R3 the sort
   and X equips better gear.
-- **Clearer menus.** The character sheet reads at a glance: attributes and saving throws centred with their modifiers,
-  experience and alignment on labelled bars, class skills marked, and Force powers with their icons. Equipment slots
-  show each item's icon in a slot of its own. The filters are one bar with a count on each, and the security check is
-  a cleaner card with its roll, the sum and the result. The journal reads as the original's log: the latest entry, where
-  it was written, and the earlier ones under it, with the original's console and mobile controls put as this game's.
-  The map fills its page. Doors to another level say where they go ("Go to Peragus Fuel Depot").
-- **Fixed:** in the menus, every tab once clicked stayed lit. Map notes are gone: the map shows the level as it is.
-- **Fixed on Peragus, as T3:** the welded door in the hangar can be blown open with the sonic charges from the fuel
-  depot, as in the original: set one beside it and step back (a mine you fail to set stays in your hands). In the droid
-  ambush on the way back, both droids now raise their shields and face the way the scene places them. The Ebon Hawk's
-  hull is the right way up wherever it's parked.
 - **People stand on the ground.** With Effects on Enhanced, everyone has a soft shadow on the floor beneath them. It
   follows slopes and stairs, fades as they leave the ground, and goes with them when they're hidden.
 

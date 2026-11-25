@@ -1,7 +1,7 @@
 # Known issues
 
 Things I already know about in the demo, so you don't need to report them (but if you find out more, add it to the
-issue linked here, or open one). Last updated for **0.9.12** (early access).
+issue linked here, or open one). Last updated for **0.9.13** (early access).
 
 ## Installing
 
