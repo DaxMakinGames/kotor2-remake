@@ -36,7 +36,7 @@ issue linked here, or open one). Last updated for **0.9.12** (early access).
   so the stick clicks do two things: tap L3 to switch character or hold it for Stealth Mode; tap R3 to send the party
   at your target or hold it to have them hold or follow. In the inventory, LT and RT change the filter, R3 the sort,
   X equips better gear and Y marks junk.
-- **The map's markers** show exits, loot and your own notes, not where a quest wants you to go: the original game's
+- **The map's markers** show exits and loot, not where a quest wants you to go: the original game's
   journal only says what to do, not where.
 - **The map shows only rooms you've been in.** Saves from before 0.7.0 didn't keep track, so the map starts again
   from the room you load into.
