@@ -3,6 +3,33 @@
 What changed in each version, newest first. Every release's full notes, with downloads, are on the
 [releases page](https://github.com/DaxMakinGames/kotor2-remake/releases).
 
+## 0.9.14 (2026-11-26)
+
+Updating from 0.9.13 builds the game data again (Pazaak's decks, the new story messages and the movies at full size
+are in it), so like a first install it needs your copy of KOTOR 2, TSLRCM and the full build's disk space. Your saves,
+settings and mods are kept.
+
+- **Pazaak.** The card game is in, against the original's opponents and their side decks, with winning, losing and
+  walking away from the table as the original's scripts expect. Duels keep their rules: break one (a weapon in a fist
+  fight, say) and you forfeit.
+- **Scenes that flow.** Conversation cameras glide through their moves instead of turning sharply at each mark, and
+  people ease round to face each other instead of snapping. A step into place slides; a longer one fades them out and
+  back in. Someone a scene removes fades away as in the original, and someone it brings in fades into sight, so a stunt
+  double hands over to the real character without a pop. Room animations blend, staged blows land with their sound and
+  a flinch, and the subtitles step aside while a scene acts something out.
+- **Voices.** Conversation voices carry the echo of the room the speaker is in. Lips move more naturally and stay a
+  hair ahead of the voice, and a line with no lip-sync file still moves the mouth. A remark in passing shows over the
+  speaker's head with their name, not in the corner of the screen. Companions' battle cries move with them and don't
+  repeat the same line twice running.
+- **Movies.** Shown at their full size (1600 wide, where they were 1280), cleaner and with every movie's sound at the
+  same level. Each fades in and out instead of cutting, a skip fades away, and a level you're travelling to loads
+  while the movie plays, so you arrive as it ends instead of waiting on a loading screen. A level change that names
+  its own movies now plays them.
+- **Story and scripts.** Datapads and story messages open in their own box, map pins appear, and many smaller things
+  scripts ask for now work: saved places, Force powers cast in scenes, Bao-Dur's remote, switching who leads the party,
+  surrendering, and more.
+- **Fixed:** weapons could float beside people's bodies instead of sitting in their hands.
+
 ## 0.9.13 (2026-11-24)
 
 The first 0.9.12 Setups were built before these changes; this version brings them to anyone who installed it then.

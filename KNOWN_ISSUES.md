@@ -1,7 +1,7 @@
 # Known issues
 
 Things I already know about in the demo, so you don't need to report them (but if you find out more, add it to the
-issue linked here, or open one). Last updated for **0.9.13** (early access).
+issue linked here, or open one). Last updated for **0.9.14** (early access).
 
 ## Installing
 
@@ -54,6 +54,9 @@ issue linked here, or open one). Last updated for **0.9.13** (early access).
   Enhanced Force powers, steam and dust. Reports of anything that looks or sounds wrong are welcome.
 - **Swoop racing is new** in 0.9.9. At GO and after any crash the swoop sits in neutral until you shift up, as in the
   original. If the race seems to stop for no reason, please report where on the course it happened.
+- **New in 0.9.14 and not much played yet:** Pazaak, and the smoother scenes (cameras, turns, fades, voices' echo,
+  remarks over people's heads). If a scene looks wrong where it didn't before, which scene and roughly when is all I
+  need.
 - **The planets after Telos aren't open yet**: the game says so if you set course for one.
 - **Stores and the galaxy map are new** in 0.9.5. Peragus has no store, so they show up with Telos.
 - **The party selection screen and Companion Settings are new** in 0.9.0. Peragus never asks for the party screen

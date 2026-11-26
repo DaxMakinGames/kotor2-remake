@@ -2,7 +2,7 @@
 
 <span class="hook-kind event">event</span> &nbsp; Stores and minigames
 
-A minigame has begun: "turret" (the Ebon Hawk's gun on Peragus) or "swoop" (the race on Telos). Pazaak will say so too once it's in.
+A minigame has begun: "turret" (the Ebon Hawk's gun on Peragus), "swoop" (the races on Telos and Nar Shaddaa) or "pazaak" (once the side deck is picked and the first card is dealt).
 
 ## Signature
 
@@ -17,7 +17,7 @@ on(&"minigame_started", func(kind: String): ...)
 
 ## Where the game calls it
 
-KotorTurret, KotorSwoop
+KotorTurret, KotorSwoop, KotorPazaakUI
 
 ## Example
 

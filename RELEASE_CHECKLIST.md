@@ -82,7 +82,7 @@ Peragus doesn't use any of these, so they'll show up along with the planets that
 - [x] Skills in play: mines found, disarmed, recovered and set (Awareness, Demolitions), and Stealth Mode (0.9.10)
 - [x] Enemies scaled to the party, as autobalance.2da has it (0.9.10)
 - [x] The party's own voice sets in play: battle cries, pain, low health, mines, stealth, falling behind (0.9.10)
-- [ ] Pazaak (the turret minigame and swoop racing are in)
+- [x] Pazaak, by the original's rules: side decks from the inventory, opponents' decks from pazaakdecks.2da, wagers, end scripts (tools/pazaak_test)
 - [x] The journal across planets: grouped by planet, the latest news first, new updates marked, each quest's earlier entries (0.9.8)
 - [x] Enemies' combat feats (Power Attack, Flurry, Critical Strike...) and critical hits (0.9.6)
 - [x] Every original script function the game calls: every built level has all it calls, swoop racing's too (0.9.9)
